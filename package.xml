@@ -11,6 +11,7 @@
   
   <buildtool_depend>catkin</buildtool_depend>
 
+  <build_depend>angles</build_depend>
   <build_depend>control_toolbox</build_depend>
   <build_depend>gazebo_ros</build_depend>
   <build_depend>robot_controllers</build_depend>

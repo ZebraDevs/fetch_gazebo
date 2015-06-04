@@ -5,6 +5,7 @@ find_package(gazebo REQUIRED)
 
 find_package(catkin
   REQUIRED
+    angles
     control_toolbox
     gazebo_ros
     robot_controllers
