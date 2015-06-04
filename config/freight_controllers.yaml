@@ -1,0 +1,33 @@
+base_controller:
+  type: "robot_controllers/DiffDriveBaseController"
+  max_velocity_x: 2.0
+  max_acceleration_x: 1.5
+  autostart: true
+
+gazebo:
+  default_controllers:
+    - "base_controller"
+  l_wheel_joint:
+    position:
+      p: 0.0
+      d: 0.0
+      i: 0.0
+      i_clamp: 0.0
+    velocity:
+      p: 8.85
+      d: 0.0
+      i: 0.5
+      i_clamp: 6.0
+    effort_limit: 8.85
+  r_wheel_joint:
+    position:
+      p: 0.0
+      d: 0.0
+      i: 0.0
+      i_clamp: 0.0
+    velocity:
+      p: 8.85
+      d: 0.0
+      i: 0.5
+      i_clamp: 6.0
+    effort_limit: 8.85

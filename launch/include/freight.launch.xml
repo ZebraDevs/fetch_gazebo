@@ -1,0 +1,28 @@
+<launch>
+
+  <arg name="x" default="0.0" />
+  <arg name="y" default="0.0" />
+
+  <!-- Setup controllers -->
+  <rosparam file="$(find fetch_gazebo)/config/freight_controllers.yaml" command="load" />
+
+  <!-- URDF and TF support -->
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find fetch_gazebo)/robots/freight.gazebo.xacro" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+    <param name="publish_frequency" value="100.0"/>
+  </node>
+
+  <!-- Put a robot in gazebo, make it look pretty -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -x $(arg x) -y $(arg y) -z 0 -model freight -param robot_description"/>
+
+  <!-- Give this robot a serial number and version -->
+  <param name="robot/serial" value="XWVUTSRQPONMLKJIHGFEDCBA" />
+  <param name="robot/version" value="0.0.1" />
+
+  <!-- Start a mux between application and teleop -->
+  <node pkg="topic_tools" type="mux" name="cmd_vel_mux" respawn="true" args="base_controller/command /cmd_vel /teleop/cmd_vel">
+    <remap from="mux" to="cmd_vel_mux" />
+  </node>
+
+</launch>

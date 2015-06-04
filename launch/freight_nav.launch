@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find fetch_navigation)/launch/freight_nav.launch" >
+    <arg name="map_file" value="$(find fetch_gazebo)/maps/1961_feb_05_2015.yaml" />
+  </include>
+
+</launch>
+
