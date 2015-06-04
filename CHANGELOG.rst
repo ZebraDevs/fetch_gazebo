@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add depend on angles
+* Contributors: Michael Ferguson
+
 0.3.1 (2015-06-03)
 ------------------
 * add simulation model for freight
