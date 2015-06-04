@@ -1,0 +1,22 @@
+<launch>
+
+  <!-- Start navigation -->
+  <include file="$(find fetch_navigation)/launch/navigate.launch" />
+
+  <!-- Start MoveIt -->
+  <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
+    <arg name="info" value="true"/><!-- publish grasp markers -->
+  </include>
+
+  <!-- Start Perception -->
+  <node name="basic_grasping_perception" pkg="simple_grasping" type="basic_grasping_perception" >
+    <!-- finger tips are 195mm from wrist_roll_link
+         fingers are 60mm deep -->
+    <param name="tool_offset" value="0.165" />
+    <param name="finger_depth" value="0.020" />
+  </node>
+
+  <!-- Drive to the table, pick stuff up -->
+  <node name="demo" pkg="fetch_gazebo" type="demo.py" output="screen" />
+
+</launch>

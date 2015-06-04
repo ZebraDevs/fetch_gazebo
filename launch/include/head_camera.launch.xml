@@ -1,0 +1,35 @@
+<launch>
+
+  <group ns="head_camera">
+
+    <!-- When simulating, we need to start nodelet manager
+         (on real robot, this is part of openni2_launch) -->
+    <include file="$(find rgbd_launch)/launch/includes/manager.launch.xml">
+      <arg name="name" value="head_camera_nodelet_manager" />
+      <arg name="debug" value="false" /> <!-- Run manager in GDB? -->
+      <arg name="num_worker_threads"  value="2" />
+    </include>
+
+    <!-- decimated to 160x120 -->
+    <node pkg="nodelet" type="nodelet" name="crop_decimate"
+          args="load image_proc/crop_decimate /head_camera/head_camera_nodelet_manager"
+          output="screen">
+      <remap from="camera/image_raw" to="depth_registered/image_raw" />
+      <remap from="camera/camera_info" to="depth_registered/camera_info" />
+      <remap from="camera_out" to="depth_downsample" />
+      <param name="decimation_x" value="4" />
+      <param name="decimation_y" value="4" />
+      <param name="queue_size" value="1" />
+    </node>
+
+    <!-- downsampled XYZ point cloud (mainly for navigation) -->
+    <node pkg="nodelet" type="nodelet" name="points_downsample"
+          args="load depth_image_proc/point_cloud_xyz /head_camera/head_camera_nodelet_manager"
+          ns="depth_downsample"
+          output="screen">
+      <remap from="image_rect" to="image_raw"/>
+    </node>
+
+  </group>
+
+</launch>
