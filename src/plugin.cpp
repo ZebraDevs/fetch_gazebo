@@ -37,7 +37,6 @@
 #include <ros/ros.h>
 #include <sensor_msgs/JointState.h>
 #include <robot_controllers_interface/controller_manager.h>
-#include <robot_controllers/diff_drive_base.h>  // For odom publishing
 #include <fetch_gazebo/joint_handle.h>
 #include <gazebo/common/common.hh>
 #include <gazebo/physics/physics.hh>
@@ -152,15 +151,6 @@ void FetchGazeboPlugin::OnUpdate(
     js.effort.push_back(joints_[i]->getEffort());
   }
   joint_state_pub_.publish(js);
-
-  // Publish Base Odometry
-  robot_controllers::HandlePtr base = controller_manager_.getHandle("base_controller");
-  if (base)
-  {
-    robot_controllers::DiffDriveBaseControllerPtr base_ptr = boost::dynamic_pointer_cast<robot_controllers::DiffDriveBaseController>(base);
-    if (base_ptr)
-        base_ptr->publish(now);
-  }
 
   last_publish_ = now;
 }
