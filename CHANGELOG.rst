@@ -2,6 +2,13 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add simulation model for freight
+* add navigation configuration for simulated env
+* update for timer-based base controller
+* Contributors: Michael Ferguson
+
 0.3.0 (2015-06-03)
 ------------------
 * init from preview repo
