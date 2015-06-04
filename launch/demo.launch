@@ -1,7 +1,7 @@
 <launch>
 
   <!-- Start navigation -->
-  <include file="$(find fetch_navigation)/launch/navigate.launch" />
+  <include file="$(find fetch_gazebo)/launch/fetch_nav.launch" />
 
   <!-- Start MoveIt -->
   <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
