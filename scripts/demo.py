@@ -310,5 +310,6 @@ if __name__ == "__main__":
             break
         rospy.logwarn("Placing failed.")
 
-    # Tuck the arm
+    # Tuck the arm, lower the torso
     grasping_client.tuck()
+    torso_action.move_to([0.0, ])
