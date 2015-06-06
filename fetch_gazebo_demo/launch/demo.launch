@@ -1,7 +1,7 @@
 <launch>
 
   <!-- Start navigation -->
-  <include file="$(find fetch_gazebo)/launch/fetch_nav.launch" />
+  <include file="$(find fetch_gazebo_demo)/launch/fetch_nav.launch" />
 
   <!-- Start MoveIt -->
   <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
@@ -17,6 +17,6 @@
   </node>
 
   <!-- Drive to the table, pick stuff up -->
-  <node name="demo" pkg="fetch_gazebo" type="demo.py" output="screen" />
+  <node name="demo" pkg="fetch_gazebo_demo" type="demo.py" output="screen" />
 
 </launch>
