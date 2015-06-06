@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix install
+* Contributors: Michael Ferguson
+
 0.4.1 (2015-06-05)
 ------------------
 
