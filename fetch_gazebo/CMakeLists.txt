@@ -53,6 +53,6 @@ install(
 )
 
 install(
-  DIRECTORY config include launch robots
+  DIRECTORY config include launch robots world
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )

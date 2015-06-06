@@ -21,18 +21,13 @@
   <run_depend>control_toolbox</run_depend>
   <run_depend>depth_image_proc</run_depend>
   <run_depend>fetch_description</run_depend>
-  <run_depend>fetch_navigation</run_depend>
   <run_depend>gazebo_ros</run_depend>
   <run_depend>geometry_msgs</run_depend>
-  <run_depend>grasping_msgs</run_depend>
   <run_depend>image_proc</run_depend>
-  <run_depend>moveit_python</run_depend>
   <run_depend>nodelet</run_depend>
   <run_depend>robot_controllers</run_depend>
   <run_depend>robot_controllers_interface</run_depend>
   <run_depend>rgbd_launch</run_depend>
-  <run_depend>simple_grasping</run_depend>
-  <run_depend>teleop_twist_keyboard</run_depend>
   <run_depend>trajectory_msgs</run_depend>
   <run_depend>xacro</run_depend>
 </package>
