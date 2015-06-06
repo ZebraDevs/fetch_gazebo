@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo_demo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* split demos into separate package
+* Contributors: Michael Ferguson
+
 0.3.2 (2015-06-04)
 ------------------
 * add depend on angles
