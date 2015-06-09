@@ -41,6 +41,7 @@
 #include <gazebo/common/common.hh>
 #include <gazebo/physics/physics.hh>
 #include <gazebo/gazebo.hh>
+#include <urdf/model.h>
 
 namespace gazebo
 {
@@ -95,12 +96,22 @@ void FetchGazeboPlugin::Init()
   // Init time stuff
   prevUpdateTime = model_->GetWorld()->GetSimTime();
   last_publish_ = ros::Time(prevUpdateTime.Double());
+  urdf::Model urdfmodel;
+  if (!urdfmodel.initParam("robot_description"))
+  {
+    ROS_ERROR("Failed to parse URDF");  
+  }
 
   // Init joint handles
   gazebo::physics::Joint_V joints = model_->GetJoints();
   for (physics::Joint_V::iterator it = joints.begin(); it != joints.end(); ++it)
   {
-    JointHandlePtr handle(new JointHandle(*it));
+    //get effort limit and continuous state from URDF
+    boost::shared_ptr<const urdf::Joint> urdf_joint = urdfmodel.getJoint((*it)->GetName());
+
+    JointHandlePtr handle(new JointHandle(*it, 
+                                          urdf_joint->limits->effort,
+                                          (urdf_joint->type == urdf::Joint::CONTINUOUS)));
     joints_.push_back(handle);
     robot_controllers::JointHandlePtr h(handle);
     controller_manager_.addJointHandle(h);
