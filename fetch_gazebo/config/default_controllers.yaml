@@ -80,7 +80,6 @@ gazebo:
       d: 0.0
       i: 0.5
       i_clamp: 6.0
-    effort_limit: 8.85
   r_wheel_joint:
     position:
       p: 0.0
@@ -92,7 +91,6 @@ gazebo:
       d: 0.0
       i: 0.5
       i_clamp: 6.0
-    effort_limit: 8.85
   torso_lift_joint:
     position:
       p: 150000.0
@@ -170,8 +168,6 @@ gazebo:
       d: 0.0
       i: 0.0
       i_clamp: 0.0
-    continuous: true
-    effort_limit: 76.94
   elbow_flex_joint:
     position:
       p: 500.0
@@ -194,8 +190,6 @@ gazebo:
       d: 0.0
       i: 0.0
       i_clamp: 0.0
-    continuous: true
-    effort_limit: 29.35
   wrist_flex_joint:
     position:
       p: 100.0
@@ -218,8 +212,6 @@ gazebo:
       d: 0.0
       i: 0.0
       i_clamp: 0.0
-    continuous: true
-    effort_limit: 7.36
   l_gripper_finger_joint:
     position:
       p: 5000.0

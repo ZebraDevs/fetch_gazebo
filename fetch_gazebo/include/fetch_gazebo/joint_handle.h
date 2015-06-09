@@ -59,7 +59,9 @@ class JointHandle : public robot_controllers::JointHandle
   };
 
 public:
-  JointHandle(physics::JointPtr& joint) :
+  JointHandle(physics::JointPtr& joint,
+              const float effort_limit,
+              const bool continuous) :
     joint_(joint),
     mode_(MODE_DISABLED)
   {
@@ -69,11 +71,9 @@ public:
     position_pid_.init(ros::NodeHandle(nh, getName() + "/position"));
     velocity_pid_.init(ros::NodeHandle(nh, getName() + "/velocity"));
 
-    // Load optional effort_limit as a workaround to gzsdf limitation
-    nh.param(getName() + "/effort_limit", effort_limit_, -1.0);
-
-    // Pull continuous from parameters
-    nh.param(getName() + "/continuous", continuous_, false);
+    // Set effort limit and continuous state
+    effort_limit_ = effort_limit;
+    continuous_ = continuous;
   }
   virtual ~JointHandle()
   {
