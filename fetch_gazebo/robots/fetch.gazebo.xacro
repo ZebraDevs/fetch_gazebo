@@ -80,7 +80,7 @@
           </horizontal>
         </scan>
         <range>
-          <min>0.3</min><!-- actual min distance is 0.05m, increased so we don't "see" the base collision model -->
+          <min>0.05</min>
           <max>25.0</max>
           <resolution>0.01</resolution>
         </range>
