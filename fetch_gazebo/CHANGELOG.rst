@@ -2,6 +2,12 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* base_link collision mesh is updated, fix laser min range
+* Change retrieval of effort limits/continuous state from parameters to URDF
+* Contributors: Michael Ferguson, Michael Hwang
+
 0.4.2 (2015-06-06)
 ------------------
 * fix install
