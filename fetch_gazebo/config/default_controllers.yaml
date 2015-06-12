@@ -50,6 +50,11 @@ base_controller:
 gripper_controller:
   gripper_action:
     type: "robot_controllers/ParallelGripperController"
+    centering:
+      p: 1000.0
+      d: 0.0
+      i: 0.0
+      i_clamp: 0.0
 
 bellows_controller:
   type: "robot_controllers/ScaledMimicController"
