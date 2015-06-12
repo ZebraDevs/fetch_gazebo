@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* use centering controller for gripper
+* Contributors: Michael Ferguson
+
 0.4.3 (2015-06-10)
 ------------------
 * base_link collision mesh is updated, fix laser min range
