@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.4 (2015-06-12)
+------------------
 * use centering controller for gripper
 * Contributors: Michael Ferguson
 
