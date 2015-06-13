@@ -14,6 +14,7 @@
          fingers are 60mm deep -->
     <param name="tool_offset" value="0.165" />
     <param name="finger_depth" value="0.020" />
+    <param name="gripper/gripper_tolerance" value="0.05" />
   </node>
 
   <!-- Drive to the table, pick stuff up -->
