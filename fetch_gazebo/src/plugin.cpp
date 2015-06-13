@@ -109,7 +109,8 @@ void FetchGazeboPlugin::Init()
     //get effort limit and continuous state from URDF
     boost::shared_ptr<const urdf::Joint> urdf_joint = urdfmodel.getJoint((*it)->GetName());
 
-    JointHandlePtr handle(new JointHandle(*it, 
+    JointHandlePtr handle(new JointHandle(*it,
+                                          urdf_joint->limits->velocity,
                                           urdf_joint->limits->effort,
                                           (urdf_joint->type == urdf::Joint::CONTINUOUS)));
     joints_.push_back(handle);

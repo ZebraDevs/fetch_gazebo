@@ -98,107 +98,74 @@ gazebo:
       i_clamp: 6.0
   torso_lift_joint:
     position:
-      p: 150000.0
-      d: 1000.0
-      i: 1000.0
-      i_clamp: 30.0
+      p: 1000.0
+      d: 0.0
+      i: 0.0
+      i_clamp: 0.0
     velocity:
-      p: 0.0
+      p: 100000.0
       d: 0.0
       i: 0.0
       i_clamp: 0.0
   bellows_joint:
     position:
-      p: 50.0
+      p: 10.0
       d: 0.0
       i: 0.0
       i_clamp: 0.0
     velocity:
-      p: 1.0
+      p: 25.0
       d: 0.0
       i: 0.0
       i_clamp: 0.0
   head_pan_joint:
     position:
-      p: 25.0
-      d: 1.0
+      p: 2.0
+      d: 0.0
       i: 0.0
       i_clamp: 0.0
     velocity:
-      p: 0.0
+      p: 2.0
       d: 0.0
       i: 0.0
       i_clamp: 0.0
   head_tilt_joint:
     position:
-      p: 25.0
-      d: 1.0
+      p: 10.0
+      d: 0.0
       i: 0.0
       i_clamp: 0.0
     velocity:
-      p: 0.0
+      p: 3.0
       d: 0.0
       i: 0.0
       i_clamp: 0.0
   shoulder_pan_joint:
     position:
-      p: 500.0
-      d: 5.0
+      p: 100.0
+      d: 0.1
       i: 0.0
       i_clamp: 0.0
     velocity:
-      p: 20.0
+      p: 200.0
       d: 0.0
-      i: 0.0
-      i_clamp: 0.0
+      i: 2.0
+      i_clamp: 1.0
   shoulder_lift_joint:
     position:
-      p: 250.0
-      d: 5.0
-      i: 10.0
-      i_clamp: 10.0
+      p: 100.0
+      d: 0.1
+      i: 0.0
+      i_clamp: 0.0
     velocity:
-      p: 30.0
+      p: 200.0
       d: 0.0
       i: 0.0
       i_clamp: 0.0
   upperarm_roll_joint:
     position:
-      p: 250.0
-      d: 5.0
-      i: 0.0
-      i_clamp: 0.0
-    velocity:
-      p: 20.0
-      d: 0.0
-      i: 0.0
-      i_clamp: 0.0
-  elbow_flex_joint:
-    position:
-      p: 500.0
-      d: 5.0
-      i: 0.0
-      i_clamp: 0.0
-    velocity:
-      p: 20.0
-      d: 0.0
-      i: 0.0
-      i_clamp: 0.0
-  forearm_roll_joint:
-    position:
       p: 100.0
-      d: 2.5
-      i: 0.0
-      i_clamp: 0.0
-    velocity:
-      p: 5.0
-      d: 0.0
-      i: 0.0
-      i_clamp: 0.0
-  wrist_flex_joint:
-    position:
-      p: 100.0
-      d: 5.0
+      d: 0.1
       i: 0.0
       i_clamp: 0.0
     velocity:
@@ -206,14 +173,47 @@ gazebo:
       d: 0.0
       i: 0.0
       i_clamp: 0.0
-  wrist_roll_joint:
+  elbow_flex_joint:
     position:
-      p: 75.0
-      d: 1.5
+      p: 100.0
+      d: 0.1
       i: 0.0
       i_clamp: 0.0
     velocity:
-      p: 1.0
+      p: 150.0
+      d: 0.0
+      i: 0.0
+      i_clamp: 0.0
+  forearm_roll_joint:
+    position:
+      p: 100.0
+      d: 0.1
+      i: 0.0
+      i_clamp: 0.0
+    velocity:
+      p: 150.0
+      d: 0.0
+      i: 0.0
+      i_clamp: 0.0
+  wrist_flex_joint:
+    position:
+      p: 100.0
+      d: 0.1
+      i: 0.0
+      i_clamp: 0.0
+    velocity:
+      p: 100.0
+      d: 0.0
+      i: 0.0
+      i_clamp: 0.0
+  wrist_roll_joint:
+    position:
+      p: 100.0
+      d: 0.1
+      i: 0.0
+      i_clamp: 0.0
+    velocity:
+      p: 100.0
       d: 0.0
       i: 0.0
       i_clamp: 0.0
