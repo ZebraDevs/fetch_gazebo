@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.5.0 (2015-06-13)
+------------------
 * apply filter to velocity
 * implement servo loop
   * position wraps velocity controller
