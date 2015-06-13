@@ -64,6 +64,7 @@ public:
               const double effort_limit,
               const bool continuous) :
     joint_(joint),
+    actual_velocity_(0.0),
     mode_(MODE_DISABLED)
   {
     ros::NodeHandle nh("~");
@@ -135,7 +136,7 @@ public:
   /** @brief Get the velocity of the joint in rad/sec or meters/sec. */
   virtual double getVelocity()
   {
-    return joint_->GetVelocity(0);
+    return actual_velocity_;
   }
 
   /** @brief Get applied effort of a joint in Nm or N. */
@@ -206,18 +207,20 @@ public:
   /** @brief Actually apply updates to gazebo */
   void update(const ros::Time now, const ros::Duration dt)
   {
+    actual_velocity_ += 0.1 * (joint_->GetVelocity(0) - actual_velocity_);
+
     double effort = 0.0;
     if (mode_ == MODE_CONTROL_POSITION)
     {
       double p_error = angles::shortest_angular_distance(getPosition(), desired_position_);
       double v = position_pid_.computeCommand(p_error, dt) + desired_velocity_;
       v = std::min(getVelocityMax(), std::max(-getVelocityMax(), v));
-      double t = velocity_pid_.computeCommand(v - getVelocity(), dt);
+      double t = velocity_pid_.computeCommand(v - actual_velocity_, dt);
       effort = t + desired_effort_;
     }
     else if (mode_ == MODE_CONTROL_VELOCITY)
     {
-      double t = velocity_pid_.computeCommand(desired_velocity_ - getVelocity(), dt);
+      double t = velocity_pid_.computeCommand(desired_velocity_ - actual_velocity_, dt);
       effort = t + desired_effort_;
     }
     else if (mode_ == MODE_CONTROL_EFFORT)
@@ -257,6 +260,7 @@ private:
 
   /// GetForce(0u) is not always right
   double applied_effort_;
+  double actual_velocity_;
 
   // You no copy...
   JointHandle(const JointHandle&);
