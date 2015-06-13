@@ -60,9 +60,11 @@ class JointHandle : public robot_controllers::JointHandle
 
 public:
   JointHandle(physics::JointPtr& joint,
-              const float effort_limit,
+              const double velocity_limit,
+              const double effort_limit,
               const bool continuous) :
     joint_(joint),
+    actual_velocity_(0.0),
     mode_(MODE_DISABLED)
   {
     ros::NodeHandle nh("~");
@@ -72,6 +74,7 @@ public:
     velocity_pid_.init(ros::NodeHandle(nh, getName() + "/velocity"));
 
     // Set effort limit and continuous state
+    velocity_limit_ = velocity_limit;
     effort_limit_ = effort_limit;
     continuous_ = continuous;
   }
@@ -133,7 +136,7 @@ public:
   /** @brief Get the velocity of the joint in rad/sec or meters/sec. */
   virtual double getVelocity()
   {
-    return joint_->GetVelocity(0);
+    return actual_velocity_;
   }
 
   /** @brief Get applied effort of a joint in Nm or N. */
@@ -163,7 +166,10 @@ public:
   /** @brief Get the maximum velocity command. */
   virtual double getVelocityMax()
   {
-    return joint_->GetVelocityLimit(0);
+    if (velocity_limit_ < 0.0)
+      return joint_->GetVelocityLimit(0);
+    else
+      return velocity_limit_;
   }
 
   /** @brief Get the maximum effort command. */
@@ -201,17 +207,20 @@ public:
   /** @brief Actually apply updates to gazebo */
   void update(const ros::Time now, const ros::Duration dt)
   {
-    float effort = 0.0;
+    actual_velocity_ += 0.1 * (joint_->GetVelocity(0) - actual_velocity_);
+
+    double effort = 0.0;
     if (mode_ == MODE_CONTROL_POSITION)
     {
-      float p_error = angles::shortest_angular_distance(getPosition(), desired_position_);
-      float t = position_pid_.computeCommand(p_error, dt) +
-                velocity_pid_.computeCommand(desired_velocity_ - getVelocity(), dt);
+      double p_error = angles::shortest_angular_distance(getPosition(), desired_position_);
+      double v = position_pid_.computeCommand(p_error, dt) + desired_velocity_;
+      v = std::min(getVelocityMax(), std::max(-getVelocityMax(), v));
+      double t = velocity_pid_.computeCommand(v - actual_velocity_, dt);
       effort = t + desired_effort_;
     }
     else if (mode_ == MODE_CONTROL_VELOCITY)
     {
-      float t = velocity_pid_.computeCommand(desired_velocity_ - getVelocity(), dt);
+      double t = velocity_pid_.computeCommand(desired_velocity_ - actual_velocity_, dt);
       effort = t + desired_effort_;
     }
     else if (mode_ == MODE_CONTROL_EFFORT)
@@ -220,7 +229,7 @@ public:
     }
 
     // Limit effort so robot doesn't implode
-    float lim = getEffortMax();
+    double lim = getEffortMax();
     applied_effort_ = std::max(-lim, std::min(effort, lim));
 
     // Actually update
@@ -230,15 +239,18 @@ public:
 private:
   physics::JointPtr joint_;
 
-  float desired_position_;
-  float desired_velocity_;
-  float desired_effort_;
+  double desired_position_;
+  double desired_velocity_;
+  double desired_effort_;
   
   /// control mode
   int mode_;
 
   control_toolbox::Pid position_pid_;
   control_toolbox::Pid velocity_pid_;
+
+  /// Hack for continuous joints that fail to have velocity limits
+  double velocity_limit_;
 
   /// Hack for continuous joints that fail to have effort limits
   double effort_limit_;
@@ -248,6 +260,7 @@ private:
 
   /// GetForce(0u) is not always right
   double applied_effort_;
+  double actual_velocity_;
 
   // You no copy...
   JointHandle(const JointHandle&);
