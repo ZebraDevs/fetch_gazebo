@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* forget install models
+* Contributors: Kei Okada
+
 0.5.0 (2015-06-13)
 ------------------
 * apply filter to velocity
