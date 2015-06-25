@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add check to prevent running prepare script on a real robot
+* Contributors: Michael Ferguson
+
 0.5.1 (2015-06-23)
 ------------------
 * forget install models
