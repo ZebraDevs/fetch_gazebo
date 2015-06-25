@@ -1,6 +1,6 @@
 <package>
   <name>fetch_gazebo</name>
-  <version>0.5.1</version>
+  <version>0.6.0</version>
   <description>
     Gazebo package for Fetch.
   </description>
