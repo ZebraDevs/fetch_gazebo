@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add headless argument to launch files
+* Contributors: Michael Ferguson
+
 0.6.0 (2015-06-24)
 ------------------
 * add check to prevent running prepare script on a real robot
