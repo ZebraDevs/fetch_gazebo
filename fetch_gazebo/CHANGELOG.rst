@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.1 (2015-06-28)
+------------------
 * add headless argument to launch files
 * Contributors: Michael Ferguson
 
