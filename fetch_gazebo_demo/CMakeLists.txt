@@ -3,6 +3,7 @@ project(fetch_gazebo_demo)
 
 find_package(catkin)
 catkin_package()
+catkin_python_setup()
 
 install(
   PROGRAMS scripts/demo.py
@@ -10,6 +11,6 @@ install(
 )
 
 install(
-  DIRECTORY launch maps
+  DIRECTORY launch maps src
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
