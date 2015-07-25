@@ -38,6 +38,8 @@
 #ifndef FETCH_GAZEBO_JOINT_HANDLE_H
 #define FETCH_GAZEBO_JOINT_HANDLE_H
 
+#include <boost/thread/thread.hpp>
+
 #include <ros/ros.h>
 #include <angles/angles.h>
 #include <control_toolbox/pid.h>
@@ -70,8 +72,20 @@ public:
     ros::NodeHandle nh("~");
 
     // Load controller parameters
-    position_pid_.init(ros::NodeHandle(nh, getName() + "/position"));
-    velocity_pid_.init(ros::NodeHandle(nh, getName() + "/velocity"));
+    for (size_t i = 0; i < 10; i++)
+    {
+      // There appears to be some weird issue where Gazebo might start initializing
+      // the JointHandles before the rosparams are fully loaded...
+      if (position_pid_.init(ros::NodeHandle(nh, getName() + "/position")) &&
+          velocity_pid_.init(ros::NodeHandle(nh, getName() + "/velocity")))
+      {
+        // Both PID are ready, break out of this.
+        break;
+      }
+      // Cannot use ROS time, since we are in sim, and clock is not running yet
+      ROS_WARN("Unable to init PID, sleeping 1.0s");
+      boost::this_thread::sleep(boost::posix_time::seconds(1));
+    }
 
     // Set effort limit and continuous state
     velocity_limit_ = velocity_limit;
