@@ -25,5 +25,4 @@
       <pose>3.8 3.15 0.83 0 0 0</pose>
     </include>
   </world>
-  </world>
 </sdf>
