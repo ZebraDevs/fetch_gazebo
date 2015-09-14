@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.2 (2015-09-13)
+------------------
 * Fixed number of samples for the laser scanner
   Real laser scan has 662 samples
 * Update test_zone.sdf, had two `</world>` tag
