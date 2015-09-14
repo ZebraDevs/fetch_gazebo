@@ -2,6 +2,13 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fixed number of samples for the laser scanner
+  Real laser scan has 662 samples
+* Update test_zone.sdf, had two `</world>` tag
+* Contributors: Alex Henning, Kei Okada
+
 0.6.1 (2015-06-28)
 ------------------
 * add headless argument to launch files
