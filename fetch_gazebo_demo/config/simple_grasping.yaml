@@ -1,0 +1,12 @@
+# yaml file for package simple_grasping with rosnode "basic_grasping_perception"
+############################################################################
+gripper:
+  tool_to_planning_frame: 0.180
+  finger_depth: 0.020
+  gripper_tolerance: 0.05
+  approach:
+    min: 0.145
+    desired: 0.15
+  retreat:
+    min: 0.145
+    desired: 0.15
