@@ -27,6 +27,7 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Author: Michael Ferguson
+# Author: Di Sun
 
 import copy
 import actionlib
@@ -262,7 +263,7 @@ class GraspingClient(object):
             if result.error_code.val == MoveItErrorCodes.SUCCESS:
                 return
 
-    def intermedia_stow(self):
+    def intermediate_stow(self):
         joints = ["shoulder_pan_joint", "shoulder_lift_joint", "upperarm_roll_joint",
                   "elbow_flex_joint", "forearm_roll_joint", "wrist_flex_joint", "wrist_roll_joint"]
         pose = [0.7, -0.3, 0.0, -0.3, 0.0, -0.57, 0.0]
@@ -311,7 +312,7 @@ if __name__ == "__main__":
             cube, grasps = grasping_client.getGraspableObject()
             if cube == None:
                 rospy.logwarn("Perception failed.")
-                # grasping_client.intermedia_stow()
+                # grasping_client.intermediate_stow()
                 grasping_client.stow()
                 head_action.look_at(1.2, 0.0, 0.0, "base_link")
                 continue
@@ -355,14 +356,14 @@ if __name__ == "__main__":
                 cube_in_grapper = False
                 break
             rospy.logwarn("Placing failed.")
-            grasping_client.intermedia_stow()
+            grasping_client.intermediate_stow()
             grasping_client.stow()
             if fail_ct > 15:
                 fail_ct = 0
                 break
             fail_ct += 1
         # Tuck the arm, lower the torso
-        grasping_client.intermedia_stow()
+        grasping_client.intermediate_stow()
         grasping_client.stow()
         rospy.loginfo("Finished")
         #torso_action.move_to([0.0, ])

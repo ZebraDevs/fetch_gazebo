@@ -10,8 +10,6 @@
 
   <!-- Start Perception -->
   <node name="basic_grasping_perception" pkg="simple_grasping" type="basic_grasping_perception" >
-    <!-- finger tips are 195mm from wrist_roll_link
-         fingers are 60mm deep -->
     <rosparam command="load" file="$(find fetch_gazebo_demo)/config/simple_grasping.yaml" />
   </node>
 

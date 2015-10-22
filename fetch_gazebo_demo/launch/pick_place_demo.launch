@@ -1,8 +1,5 @@
 <launch>
 
-  <!-- Start navigation -->
-  <include file="$(find fetch_gazebo_demo)/launch/fetch_nav.launch" />
-
   <!-- Start MoveIt -->
   <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
     <arg name="info" value="true"/><!-- publish grasp markers -->
@@ -10,12 +7,6 @@
 
   <!-- Start Perception -->
   <node name="basic_grasping_perception" pkg="simple_grasping" type="basic_grasping_perception" >
-    <!-- finger tips are 195mm from wrist_roll_link
-         fingers are 60mm deep -->
-    <!--  BUG those parameters do not match anything in souce code
-          <param name="tool_offset" value="0.165" />  should be: gripper/tool_to_planning_frame
-          <param name="finger_depth" value="0.020" /> should be: gripper/finger_depth
-    -->
     <rosparam command="load" file="$(find fetch_gazebo_demo)/config/simple_grasping.yaml" />
   </node>
 
