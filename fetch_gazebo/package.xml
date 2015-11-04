@@ -21,6 +21,7 @@
   <run_depend>control_toolbox</run_depend>
   <run_depend>depth_image_proc</run_depend>
   <run_depend>fetch_description</run_depend>
+  <run_depend>gazebo_plugins</run_depend>
   <run_depend>gazebo_ros</run_depend>
   <run_depend>geometry_msgs</run_depend>
   <run_depend>image_proc</run_depend>
