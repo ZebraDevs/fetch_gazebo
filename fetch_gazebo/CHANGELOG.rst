@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add run depend on gazebo_plugins
+* Contributors: Michael Ferguson
+
 0.6.2 (2015-09-13)
 ------------------
 * Fixed number of samples for the laser scanner
