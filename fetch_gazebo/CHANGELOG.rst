@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.0 (2015-11-04)
+------------------
 * add run depend on gazebo_plugins
 * Contributors: Michael Ferguson
 
