@@ -49,6 +49,7 @@ install(
 
 install(
   PROGRAMS scripts/prepare_simulated_robot.py
+  PROGRAMS scripts/prepare_simulated_robot_pick_place.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
