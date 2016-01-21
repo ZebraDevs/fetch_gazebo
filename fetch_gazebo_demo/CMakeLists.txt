@@ -5,8 +5,9 @@ find_package(catkin)
 catkin_package()
 
 install(
-  PROGRAMS scripts/demo.py
-  PROGRAMS scripts/pick_place_demo.py
+  PROGRAMS
+    scripts/demo.py
+    scripts/pick_place_demo.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
