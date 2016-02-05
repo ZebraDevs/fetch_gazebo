@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- Run object recognition detector -->
+  <arg name="config_file_objects" default="$(find fetch_gazebo_demo)/config/detection.fetch.ork"/>
+  <node pkg="object_recognition_core" name="recognize_objects" type="detection" args="-c $(arg config_file_objects)">
+  </node>
+
+  <!-- Run Rviz and load the default config to see the state of the move_group node -->
+  <arg name="rviz_cfg" default="-d $(find fetch_gazebo_demo)/config/recognize.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false"
+	args="$(arg rviz_cfg)" output="screen" />
+
+</launch>

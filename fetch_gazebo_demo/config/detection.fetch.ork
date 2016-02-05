@@ -1,0 +1,67 @@
+source1:
+  type: RosKinect
+  module: 'object_recognition_ros.io'
+  parameters:
+    rgb_frame_id: '/head_camera_depth_optical_frame'
+    rgb_image_topic: '/head_camera/rgb/image_raw'
+    rgb_camera_info: '/head_camera/rgb/camera_info'
+    depth_image_topic: '/head_camera/depth_registered/image_raw'
+    depth_camera_info: '/head_camera/depth_registered/camera_info'
+    #
+    #crop_enabled: True
+    #x_min: -0.4
+    #x_max: 0.4
+    #y_min: -1.0
+    #y_max: 0.2
+    #z_min: 0.3
+    #z_max: 1.5
+
+sink1:
+  type: TablePublisher
+  module: 'object_recognition_tabletop'
+  inputs: [source1]
+
+sink2:
+  type: Publisher
+  module: 'object_recognition_ros.io'
+  inputs: [source1]
+
+# Recognize planes
+pipeline1:
+  type: TabletopTableDetector
+  module: 'object_recognition_tabletop'
+  inputs: [source1]
+  outputs: [sink1]
+  parameters:
+    table_detector:
+        #min_table_size: 4000
+        #plane_threshold: 0.01
+        min_table_size: 500
+        plane_threshold: 0.01
+    #clusterer:
+    #    table_z_filter_max: 0.35
+    #    table_z_filter_min: 0.025
+
+# Recognize objects which you have already registered on your database.
+pipeline2:
+  type: LinemodDetector
+  module: 'object_recognition_linemod'
+  inputs: [source1]
+  outputs: [sink2]
+  parameters:
+    use_rgb: 1
+    use_depth: 1
+    verbose: 1
+    visualize: 1
+    threshold: 91.6 #82.9 #91.6 
+    th_obj_dist: 0.1
+    icp_dist_min: 0.05 #0.06
+    px_match_min: 0.25 #0.5
+    depth_frame_id: 'head_camera_depth_optical_frame' #CameraDepth_frame
+    # The list of object_ids to analyze
+    object_ids: 'all'
+    #object_ids: ['24e0dc763c918714368b41b1c3000c23']
+    db:
+      type: 'CouchDB'
+      root: 'http://localhost:5984'
+      collection: 'object_recognition'
