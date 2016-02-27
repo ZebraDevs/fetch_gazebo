@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.1 (2016-02-27)
+------------------
 * robot launch files publish base_scan_raw
 * working version of the merged demos
 * Contributors: Di Sun, Andrew Vaziri

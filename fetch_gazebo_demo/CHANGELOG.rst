@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo_demo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.1 (2016-02-27)
+------------------
 * improve parameterization of demos
 * Contributors: Di Sun, Michael Ferguson
 
