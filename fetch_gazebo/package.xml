@@ -14,7 +14,7 @@
   <build_depend>angles</build_depend>
   <build_depend>control_toolbox</build_depend>
   <build_depend>gazebo_ros</build_depend>
-  <build_depend>libgazebo5-dev</build_depend>
+  <build_depend>libgazebo7-dev</build_depend>
   <build_depend>robot_controllers</build_depend>
   <build_depend>robot_controllers_interface</build_depend>
 
@@ -22,7 +22,7 @@
   <run_depend>control_toolbox</run_depend>
   <run_depend>depth_image_proc</run_depend>
   <run_depend>fetch_description</run_depend>
-  <run_depend>gazebo5</run_depend>
+  <run_depend>gazebo</run_depend>
   <run_depend>gazebo_plugins</run_depend>
   <run_depend>gazebo_ros</run_depend>
   <run_depend>geometry_msgs</run_depend>
