@@ -2,6 +2,8 @@
 
   <arg name="x" default="0.0" />
   <arg name="y" default="0.0" />
+  <arg name="z" default="0.0" />
+  <arg name="yaw" default="0.0" />
 
   <!-- Setup controllers -->
   <rosparam file="$(find fetch_gazebo)/config/freight_controllers.yaml" command="load" />
@@ -14,7 +16,7 @@
 
   <!-- Put a robot in gazebo, make it look pretty -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-urdf -x $(arg x) -y $(arg y) -z 0 -model freight -param robot_description"/>
+        args="-urdf -x $(arg x) -y $(arg y) -z $(arg z) -Y $(arg yaw) -model freight -param robot_description"/>
 
   <!-- Give this robot a serial number and version -->
   <param name="robot/serial" value="XWVUTSRQPONMLKJIHGFEDCBA" />
