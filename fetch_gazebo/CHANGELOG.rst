@@ -2,6 +2,12 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update rosdeps for gazebo5
+* add arg z/yaw for spawning robot
+* Contributors: Michael Ferguson, Yuki Furuta
+
 0.7.1 (2016-02-27)
 ------------------
 * robot launch files publish base_scan_raw

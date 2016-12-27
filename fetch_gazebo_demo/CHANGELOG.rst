@@ -2,6 +2,11 @@
 Changelog for package fetch_gazebo_demo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add rviz config for pickplace demo
+* Contributors: Kentaro Wada
+
 0.7.1 (2016-02-27)
 ------------------
 * improve parameterization of demos
