@@ -13,7 +13,7 @@
 
   <run_depend>actionlib</run_depend>
   <run_depend>fetch_gazebo</run_depend>
-  <run_depend>fetch_moveit_config</run_depend>
+  <run_depend>fetch_moveit_config_pro</run_depend>
   <run_depend>fetch_navigation</run_depend>
   <run_depend>moveit_python</run_depend>
   <run_depend>simple_grasping</run_depend>
