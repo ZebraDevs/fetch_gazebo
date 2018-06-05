@@ -128,9 +128,9 @@ public:
   {
     if (continuous_)
     {
-      return angles::normalize_angle(joint_->GetAngle(0).Radian());
+      return angles::normalize_angle(joint_->Position(0));
     }
-    return joint_->GetAngle(0).Radian();
+    return joint_->Position(0);
   }
 
   /** @brief Get the velocity of the joint in rad/sec or meters/sec. */
@@ -154,13 +154,13 @@ public:
   /** @brief Get the minimum valid position command. */
   virtual double getPositionMin()
   {
-    return joint_->GetLowerLimit(0).Radian();
+    return joint_->LowerLimit(0);
   }
 
   /** @brief Get the maximum valid position command. */
   virtual double getPositionMax()
   {
-    return joint_->GetUpperLimit(0).Radian();
+    return joint_->UpperLimit(0);
   }
 
   /** @brief Get the maximum velocity command. */
