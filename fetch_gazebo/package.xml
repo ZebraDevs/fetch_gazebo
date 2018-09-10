@@ -14,7 +14,7 @@
   <build_depend>angles</build_depend>
   <build_depend>control_toolbox</build_depend>
   <build_depend>gazebo_ros</build_depend>
-  <build_depend>libgazebo7-dev</build_depend>
+  <build_depend>libgazebo9-dev</build_depend>
   <build_depend>robot_controllers</build_depend>
   <build_depend>robot_controllers_interface</build_depend>
 
