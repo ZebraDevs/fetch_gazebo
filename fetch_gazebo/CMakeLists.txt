@@ -3,6 +3,7 @@ project(fetch_gazebo)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
+find_package(Boost REQUIRED)
 find_package(gazebo REQUIRED)
 
 find_package(catkin
@@ -17,6 +18,7 @@ find_package(catkin
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
+  ${Boost_INCLUDE_DIR}
   ${GAZEBO_INCLUDE_DIRS}
 )
 
@@ -27,11 +29,10 @@ link_directories(
 catkin_package(
   CATKIN_DEPENDS
     control_toolbox
+    gazebo_plugins
     gazebo_ros
     robot_controllers
     robot_controllers_interface
-  DEPENDS
-    gazebo
   LIBRARIES
     fetch_gazebo_plugin
   INCLUDE_DIRS
