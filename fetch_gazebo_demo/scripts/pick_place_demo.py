@@ -167,7 +167,8 @@ class GraspingClient(object):
             self.scene.addSolidPrimitive(obj.name,
                                          obj.primitives[0],
                                          obj.primitive_poses[0],
-                                         use_service = False)
+                                         use_service = True
+                                         )
 
         self.scene.waitForSync()
 
