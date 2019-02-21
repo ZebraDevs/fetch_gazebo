@@ -11,7 +11,12 @@
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>gazebo_ros</build_depend>
   <build_depend>rospy</build_depend>
+  <build_depend>robot_state_publisher</build_depend>
+  <build_depend>controller_manager</build_depend>
+  <build_depend>fetch_gazebo</build_depend>
+  
   <build_export_depend>rospy</build_export_depend>
+  
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
