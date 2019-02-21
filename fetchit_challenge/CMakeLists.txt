@@ -10,6 +10,9 @@ project(fetchit_challenge)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   gazebo_ros
+  robot_state_publisher
+  controller_manager
+  fetch_gazebo
 )
 
 ## System dependencies are found with CMake's conventions

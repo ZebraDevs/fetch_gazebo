@@ -9,11 +9,15 @@
   <license>TODO</license>
 
   <buildtool_depend>catkin</buildtool_depend>
-<build_depend>gazebo_ros</build_depend>
+  <build_depend>gazebo_ros</build_depend>
   <build_depend>rospy</build_depend>
   <build_export_depend>rospy</build_export_depend>
-<exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>rospy</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>fetch_gazebo</exec_depend>
+
 
 
   <!-- The export tag contains other, unspecified, tags -->
