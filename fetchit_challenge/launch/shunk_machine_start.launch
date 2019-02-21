@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find fetchit_challenge)/launch/shunk_machine_spawn.launch">
+        <arg name="x" value="3.905060" />
+        <arg name="y" value="-5.281311" />
+        <arg name="z" value="0.0" />
+        <arg name="roll" value="0"/>
+        <arg name="pitch" value="0"/>
+        <arg name="yaw" value="1.57" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/shunk_machine_control.launch"/>
+</launch>
