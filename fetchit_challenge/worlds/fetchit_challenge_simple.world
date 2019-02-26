@@ -11,7 +11,7 @@
     <include>
       <uri>model://fetchit_simple_env</uri>
       <name>fetchit_simple_env1</name>
-      <pose>0 0 0 0 0 0</pose>
+      <pose>0 0 0.005 0 0 0</pose>
     </include>
 
     <include>
@@ -30,7 +30,7 @@
     <include>
       <uri>model://gearbox_bolt</uri>
       <name>gearbox_bolt2</name>
-      <pose>0.509393 1.127 0.81 0 0 0</pose>
+      <pose>0.109393 1.127 0.81 0 0 0</pose>
     </include>
     
     <include>
@@ -75,7 +75,7 @@
     <include>
       <uri>model://100mmbin</uri>
       <name>100mmbin1</name>
-      <pose>2.497005 -4.123425 0.801 0 0 1.57</pose>
+      <pose>-1.0 -0.623425 0.801 0 0 1.57</pose>
     </include>
 
     <include>
@@ -92,8 +92,8 @@
     -->
 
     <light name='user_point_light_0' type='point'>
-      <pose frame=''>1.0 1.0 1.5 0 0 0</pose>
-      <diffuse>1 1 1 1</diffuse>
+      <pose frame=''>1.0 1.0 3.0 0 0 0</pose>
+      <diffuse>0.7 0.7 0.7 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>10</range>
@@ -106,8 +106,8 @@
     </light>
 
     <light name='user_point_light_1' type='point'>
-      <pose frame=''>-1.0 1.0 1.5 0 0 0</pose>
-      <diffuse>1 1 1 1</diffuse>
+      <pose frame=''>-1.0 1.0 3.0 0 0 0</pose>
+      <diffuse>0.7 0.7 0.7 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>10</range>
@@ -120,8 +120,8 @@
     </light>
 
     <light name='user_point_light_2' type='point'>
-      <pose frame=''>-1.0 -1.0 1.5 0 0 0</pose>
-      <diffuse>1 1 1 1</diffuse>
+      <pose frame=''>-1.0 -1.0 3.0 0 0 0</pose>
+      <diffuse>0.7 0.7 0.7 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>10</range>
@@ -135,8 +135,8 @@
 
 
     <light name='user_point_light_3' type='point'>
-      <pose frame=''>1.0 -1.0 1.5 0 0 0</pose>
-      <diffuse>1 1 1 1</diffuse>
+      <pose frame=''>1.0 -1.0 3.0 0 0 0</pose>
+      <diffuse>0.7 0.7 0.7 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>10</range>
