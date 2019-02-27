@@ -92,7 +92,7 @@
     -->
 
     <light name='user_point_light_0' type='point'>
-      <pose frame=''>1.0 1.0 3.0 0 0 0</pose>
+      <pose frame=''>1.0 1.0 3.5 0 0 0</pose>
       <diffuse>0.7 0.7 0.7 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
@@ -106,7 +106,7 @@
     </light>
 
     <light name='user_point_light_1' type='point'>
-      <pose frame=''>-1.0 1.0 3.0 0 0 0</pose>
+      <pose frame=''>-1.0 1.0 3.5 0 0 0</pose>
       <diffuse>0.7 0.7 0.7 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
@@ -120,7 +120,7 @@
     </light>
 
     <light name='user_point_light_2' type='point'>
-      <pose frame=''>-1.0 -1.0 3.0 0 0 0</pose>
+      <pose frame=''>-1.0 -1.0 3.5 0 0 0</pose>
       <diffuse>0.7 0.7 0.7 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
@@ -135,7 +135,7 @@
 
 
     <light name='user_point_light_3' type='point'>
-      <pose frame=''>1.0 -1.0 3.0 0 0 0</pose>
+      <pose frame=''>1.0 -1.0 3.5 0 0 0</pose>
       <diffuse>0.7 0.7 0.7 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
