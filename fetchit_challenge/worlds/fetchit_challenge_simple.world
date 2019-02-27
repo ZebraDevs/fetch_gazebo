@@ -49,7 +49,7 @@
     <!-- Pick Places -->
     <include>
       <uri>model://fetchit_table</uri>
-      <name>fetchit_table</name>
+      <name>screw_bin_pick_station</name>
       <pose>0.04929 1.22163 0.0 0 0 0</pose>
     </include>
 
