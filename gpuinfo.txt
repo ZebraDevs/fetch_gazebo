@@ -1,0 +1,11 @@
+description: 3D controller
+       product: NVIDIA Corporation
+       vendor: NVIDIA Corporation
+       physical id: 0
+       bus info: pci@0000:01:00.0
+       version: a1
+       width: 64 bits
+       clock: 33MHz
+       capabilities: bus_master cap_list rom
+       configuration: driver=nvidia latency=0
+       resources: irq:129 memory:ee000000-eeffffff memory:d0000000-dfffffff memory:e0000000-e1ffffff ioport:e000(size=128) memory:ef000000-ef07ffff
