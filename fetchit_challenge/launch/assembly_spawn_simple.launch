@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find fetchit_challenge)/launch/assembly_largegear_spawn.launch">
+        <arg name="x" value="0.180528" />
+        <arg name="y" value="-1.62698" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/assembly_smallgear_spawn.launch">
+        <arg name="x" value="0.033216" />
+        <arg name="y" value="-1.591161" />
+    </include>
+</launch>

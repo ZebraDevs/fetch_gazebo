@@ -17,7 +17,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://fetchit_table/meshes/fetchit_table.dae</uri>
+              <uri>model://fetchit_table/meshes/simple.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -33,7 +33,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://fetchit_table/meshes/fetchit_table.dae</uri>
+              <uri>model://fetchit_table/meshes/tablefetchit_v2_materials.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
