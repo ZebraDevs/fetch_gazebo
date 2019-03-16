@@ -94,7 +94,7 @@ void FetchGazeboPlugin::Load(
 void FetchGazeboPlugin::Init()
 {
   // Init time stuff
-  prevUpdateTime = model_->GetWorld()->SimTime();
+  prevUpdateTime = model_->GetWorld()->GetSimTime();
   last_publish_ = ros::Time(prevUpdateTime.Double());
   urdf::Model urdfmodel;
   if (!urdfmodel.initParam("robot_description"))
@@ -107,7 +107,7 @@ void FetchGazeboPlugin::Init()
   for (physics::Joint_V::iterator it = joints.begin(); it != joints.end(); ++it)
   {
     //get effort limit and continuous state from URDF
-    std::shared_ptr<const urdf::Joint> urdf_joint = urdfmodel.getJoint((*it)->GetName());
+    boost::shared_ptr<const urdf::Joint> urdf_joint = urdfmodel.getJoint((*it)->GetName());
 
     JointHandlePtr handle(new JointHandle(*it,
                                           urdf_joint->limits->velocity,
@@ -135,7 +135,7 @@ void FetchGazeboPlugin::OnUpdate(
     return;
 
   // Get time and timestep for controllers
-  common::Time currTime = model_->GetWorld()->SimTime();
+  common::Time currTime = model_->GetWorld()->GetSimTime();
   common::Time stepTime = currTime - prevUpdateTime;
   prevUpdateTime = currTime;
   double dt = stepTime.Double();
