@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<package format="2">
+<package>
   <name>fetch_gazebo</name>
   <version>0.8.0</version>
   <description>
@@ -13,24 +12,25 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <build_depend>angles</build_depend>
+  <build_depend>control_toolbox</build_depend>
+  <build_depend>gazebo_ros</build_depend>
   <build_depend>libgazebo9-dev</build_depend>
+  <build_depend>robot_controllers</build_depend>
+  <build_depend>robot_controllers_interface</build_depend>
 
-  <depend>control_toolbox</depend>
-  <depend>boost</depend>
-  <depend>gazebo_plugins</depend>
-  <depend>gazebo_ros</depend>
-  <depend>robot_controllers</depend>
-  <depend>robot_controllers_interface</depend>
-  <depend>sensor_msgs</depend>
-
-  <exec_depend>actionlib</exec_depend>
-  <exec_depend>control_msgs</exec_depend>
-  <exec_depend>depth_image_proc</exec_depend>
-  <exec_depend>fetch_description</exec_depend>
-  <exec_depend>gazebo</exec_depend>
-  <exec_depend>image_proc</exec_depend>
-  <exec_depend>nodelet</exec_depend>
-  <exec_depend>rgbd_launch</exec_depend>
-  <exec_depend>trajectory_msgs</exec_depend>
-  <exec_depend>xacro</exec_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>control_toolbox</run_depend>
+  <run_depend>depth_image_proc</run_depend>
+  <run_depend>fetch_description</run_depend>
+  <run_depend>gazebo</run_depend>
+  <run_depend>gazebo_plugins</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>image_proc</run_depend>
+  <run_depend>nodelet</run_depend>
+  <run_depend>robot_controllers</run_depend>
+  <run_depend>robot_controllers_interface</run_depend>
+  <run_depend>rgbd_launch</run_depend>
+  <run_depend>trajectory_msgs</run_depend>
+  <run_depend>xacro</run_depend>
 </package>
