@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find fetchit_challenge)/launch/assembly_largegear_spawn.launch"/>
+    <include file="$(find fetchit_challenge)/launch/assembly_smallgear_spawn.launch"/>
+</launch>

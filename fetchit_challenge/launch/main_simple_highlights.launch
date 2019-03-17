@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find fetchit_challenge)/launch/fetchit_challenge_simple_highlights.launch"/>
+
+    <include file="$(find fetchit_challenge)/launch/shunk_machine_start.launch">
+        <arg name="x" value="0.405060" />
+        <arg name="y" value="-1.781311" />
+        <arg name="z" value="0.0" />
+        <arg name="roll" value="0.0"/>
+        <arg name="pitch" value="0.0"/>
+        <arg name="yaw" value="1.57" />
+    </include>
+
+    <node name="spawn_assembly" pkg="fetchit_challenge" type="spawn_assembly_delayed_simple.sh" respawn="false" output="screen"/>
+
+    <include file="$(find fetchit_challenge)/launch/fetch_robot_spawn.launch">
+        <arg name="x" value="0.103035" />
+        <arg name="y" value="-0.094756" />
+        <arg name="z" value="0.0" />
+        <arg name="yaw" value="-1.57" />
+        <arg name="robot" value="fetch"/>
+    </include>
+
+</launch>

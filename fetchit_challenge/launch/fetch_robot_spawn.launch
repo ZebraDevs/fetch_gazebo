@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<launch>
+
+
+  <arg name="x" default="3.603035" />
+  <arg name="y" default="-3.594756" />
+  <arg name="z" default="0.0" />
+  <arg name="yaw" default="-1.57" />
+  <arg name="robot" default="fetch"/>
+
+  <!-- Oh, you wanted a robot? -->
+  <include file="$(find fetch_gazebo)/launch/include/$(arg robot)_pp.launch.xml" >
+    <arg name="x" value="$(arg x)" />
+    <arg name="y" value="$(arg y)" />
+    <arg name="z" value="$(arg z)" />
+    <arg name="yaw" value="$(arg yaw)" />
+  </include>
+
+</launch>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find fetchit_challenge)/launch/fetchit_challenge_test_lowlights.launch"/>
+    <include file="$(find fetchit_challenge)/launch/shunk_machine_start.launch"/>
+    <node name="spawn_assembly" pkg="fetchit_challenge" type="spawn_assembly_delayed.sh" respawn="false" output="screen"/>
+    <include file="$(find fetchit_challenge)/launch/fetch_robot_spawn.launch"/>
+
+</launch>

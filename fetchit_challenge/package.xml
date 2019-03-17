@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fetchit_challenge</name>
+  <version>0.0.0</version>
+  <description>The fetchit_challenge package</description>
+
+  <maintainer email="duckfrost@theconstructsim.com">RDaneelOlivaw</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>robot_state_publisher</build_depend>
+  <build_depend>controller_manager</build_depend>
+  <build_depend>fetch_gazebo</build_depend>
+  
+  <build_export_depend>rospy</build_export_depend>
+  
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>fetch_gazebo</exec_depend>
+
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+  </export>
+</package>
