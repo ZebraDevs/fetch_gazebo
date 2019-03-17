@@ -11,6 +11,11 @@
   <maintainer email="selliott@fetchrobotics.com">Sarah Elliott</maintainer>
 
   <license>BSD</license>
+  <url type="wiki">http://ros.org/wiki/fetch_gazebo</url>
+  <url type="website">https://opensource.fetchrobotics.com/competition</url>
+  <url type="documentation">https://docs.fetchrobotics.com/gazebo.html#launch-it-on-rosds</url>
+  <url type="bugtracker">https://github.com/fetchrobotics/fetch_gazebo/issues</url>
+  <url type="repository">https://github.com/fetchrobotics/fetch_gazebo</url>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>gazebo_ros</build_depend>
