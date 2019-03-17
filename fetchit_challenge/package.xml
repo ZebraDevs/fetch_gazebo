@@ -4,9 +4,13 @@
   <version>0.0.0</version>
   <description>The fetchit_challenge package</description>
 
+  <author>Miguel Angel Rodriguez</author>
   <maintainer email="duckfrost@theconstructsim.com">RDaneelOlivaw</maintainer>
+  <maintainer email="amoriarty@fetchrobotics.com">Alex Moriarty</maintainer>
+  <maintainer email="narora@fetchrobotics.com">Niharika Arora</maintainer>
+  <maintainer email="selliott@fetchrobotics.com">Sarah Elliott</maintainer>
 
-  <license>TODO</license>
+  <license>BSD</license>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>gazebo_ros</build_depend>
