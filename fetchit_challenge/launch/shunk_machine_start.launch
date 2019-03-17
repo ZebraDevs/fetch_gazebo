@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="x" default="3.905060" />
+    <arg name="y" default="-5.281311" />
+    <arg name="z" default="0.0" />
+    <arg name="roll" default="0"/>
+    <arg name="pitch" default="0"/>
+    <arg name="yaw" default="1.57" />
+
+
+    <include file="$(find fetchit_challenge)/launch/shunk_machine_spawn.launch">
+        <arg name="x" value="$(arg x)" />
+        <arg name="y" value="$(arg y)" />
+        <arg name="z" value="$(arg z)" />
+        <arg name="roll" value="$(arg roll)"/>
+        <arg name="pitch" value="$(arg pitch)"/>
+        <arg name="yaw" value="$(arg yaw)" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/shunk_machine_control.launch"/>
+</launch>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fetchit_challenge</name>
+  <version>0.0.0</version>
+  <description>The fetchit_challenge package</description>
+
+  <author>Miguel Angel Rodriguez</author>
+  <maintainer email="duckfrost@theconstructsim.com">RDaneelOlivaw</maintainer>
+  <maintainer email="amoriarty@fetchrobotics.com">Alex Moriarty</maintainer>
+  <maintainer email="narora@fetchrobotics.com">Niharika Arora</maintainer>
+  <maintainer email="selliott@fetchrobotics.com">Sarah Elliott</maintainer>
+
+  <license>BSD</license>
+  <url type="wiki">http://ros.org/wiki/fetch_gazebo</url>
+  <url type="website">https://opensource.fetchrobotics.com/competition</url>
+  <url type="documentation">https://docs.fetchrobotics.com/gazebo.html#launch-it-on-rosds</url>
+  <url type="bugtracker">https://github.com/fetchrobotics/fetch_gazebo/issues</url>
+  <url type="repository">https://github.com/fetchrobotics/fetch_gazebo</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>robot_state_publisher</build_depend>
+  <build_depend>controller_manager</build_depend>
+  <build_depend>fetch_gazebo</build_depend>
+  
+  <build_export_depend>rospy</build_export_depend>
+  
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>fetch_gazebo</exec_depend>
+
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+  </export>
+</package>

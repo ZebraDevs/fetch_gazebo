@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <rosparam file="$(find fetchit_challenge)/config/shunk_machine_control.yaml"
+            command="load"/>
+
+    <node name="robot_state_publisher_shunk_machine" pkg="robot_state_publisher" type="robot_state_publisher"
+        respawn="false" output="screen">
+            <param name="publish_frequency" type="double" value="10.0" />
+            <remap from="robot_description" to="robot_description_shunk_machine" />
+            <remap from="/joint_states" to="/shunk_machine/joint_states" />
+    </node>
+
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+        output="screen" args="--namespace=/shunk_machine
+                              joint_state_controller
+                              lathe_joint_velocity_controller
+                              door_joint_velocity_controller
+                              --shutdown-timeout 3">
+  </node>
+
+</launch>
