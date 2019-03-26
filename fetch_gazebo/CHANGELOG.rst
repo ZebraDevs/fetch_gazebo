@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.2 (2019-03-26)
+------------------
 * This release fast-forwarded the gazebo2 branch, and reverted breaking changes from:
   gazebo5, gazebo7 and gazebo9
 * [package.xml] adds: license(BSD), author, maintainers (#45) (#55)
