@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo_demo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.8.1 (2019-03-26)
+------------------
 * This release fast forwarded the gazebo7 branch and reverted the breaking changes from gazebo9
 * Merge pull request `#41 <https://github.com/fetchrobotics/fetch_gazebo/issues/41>`_ from moriarty/gazebo7-new
   Fast Forward Gazebo7, and revert breaking changes for Gazebo 9

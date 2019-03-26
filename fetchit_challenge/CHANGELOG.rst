@@ -2,8 +2,8 @@
 Changelog for package fetchit_challenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.8.1 (2019-03-26)
+------------------
 * [package.xml] sync versions to 0.8.0 for kinetic
 * Merge pull request `#41 <https://github.com/fetchrobotics/fetch_gazebo/issues/41>`_ from moriarty/gazebo7-new
   Fast Forward Gazebo7, and revert breaking changes for Gazebo 9
