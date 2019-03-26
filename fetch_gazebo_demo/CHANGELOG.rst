@@ -2,6 +2,30 @@
 Changelog for package fetch_gazebo_demo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* This release fast-forwarded the gazebo2 branch, and reverted breaking changes from:
+  gazebo5, gazebo7 and gazebo9
+* [package.xml] adds: license(BSD), author, maintainers (#45) (#55)
+  * [package.xml] update maintainers
+  * [fetchit_challenge] adds license(BSD), author, maintainers
+  * [fetchit_challenge] add <url> tags to package.xml
+* Reverts and reverted changes:
+  * Revert "update changelogs" <0.8.0>
+    This reverts commit ab8607adc9b0120c09869fb5c84d320c9c020d3e.
+  * Revert "0.8.0"
+    This reverts commit 3aa624857adf4142c0ca3708b028a3b05d8737ad.
+  * Revert "Corrected Bug for new Melodic MoveIt Version"
+    This reverts commit 674f28175ace0c41f6a248abf82cab2b57829d95.
+    See PR #26 and PR #32
+  * Corrected Bug for new Melodic MoveIt Version
+* Merge pull request #32 from RDaneelOlivav/gazebo9
+  FetchIt Challenge Package addition and minor melodic Moveit Fix
+  (partially reverted)
+* Added correction suggested in pick and place demo script and new tables
+* Add rviz config for pickplace demo
+* Contributors: Alexander Moriarty, Kentaro Wada, Miguel Angel Rodríguez
+
 0.7.1 (2016-02-27)
 ------------------
 * improve parameterization of demos

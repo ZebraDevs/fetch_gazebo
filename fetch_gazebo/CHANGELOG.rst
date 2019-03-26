@@ -2,6 +2,52 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* This release fast-forwarded the gazebo2 branch, and reverted breaking changes from:
+  gazebo5, gazebo7 and gazebo9
+* [package.xml] adds: license(BSD), author, maintainers (#45) (#55)
+  * [package.xml] update maintainers
+  * [fetchit_challenge] adds license(BSD), author, maintainers
+  * [fetchit_challenge] add <url> tags to package.xml
+* [CMake/Catkin] fetch_gazebo install headers (#44)
+  catkin_make_isolated --install would fail because we were not installing the header files
+  This cherry-picks PR #43
+  This fixes #42
+* reverts and reverted changes:
+  * Revert "update rosdeps for gazebo5"
+    This reverts commit 6ee207e53cc1e8fe3904720c0bfd7cb032997ca5.
+  * Revert "update changelogs" <0.8.0>
+    This reverts commit ab8607adc9b0120c09869fb5c84d320c9c020d3e.
+  * Revert "0.8.0"
+    This reverts commit 3aa624857adf4142c0ca3708b028a3b05d8737ad.
+  * Revert "updates for gazebo7"
+    This reverts commit 545769af5fd77aef83e0c182f74e577c983a4ea7.
+  * Revert [gazebo9] Merge pull request #24
+    "Merge pull request #24 from mikeferguson/gazebo9"
+    This reverts commit eecb032ded6f675ded81e477087218a2079944fa, reversing
+    changes made to 545769af5fd77aef83e0c182f74e577c983a4ea7.
+  * Revert "Merge pull request #25 ... rosdep"
+    Merge pull request #25 from stfuchs/fix/melodic-rosdep
+    This reverts commit fce68bf44ce2d214edd11f705e61590efbafa1fe, reversing
+    changes made to eecb032ded6f675ded81e477087218a2079944fa.
+  * Revert PR #29 "[CMake][package] ... REP-140"
+    [CMake][package] Clean CMake warnings and REP-140 (#29)"
+    This reverts commit 36bf32339acb8763360e63b76b45927c1032ae61.
+  * [CMake][package] Clean CMake warnings and REP-140 (#29)
+    This cleans up some, but misses one warning- might be coming from gazebo
+    itself.
+    Also moved to package.xml format 2
+  * Merge pull request #25 from stfuchs/fix/melodic-rosdep
+    change rosdep from gazebo7 to gazebo9
+  * change rosdep from gazebo7 to gazebo9
+  * Merge pull request #24 from mikeferguson/gazebo9
+    fixes for gazebo9 (melodic)
+  * fixes for gazebo9 (melodic)
+  * updates for gazebo7
+* add arg z/yaw for spawning robot
+* Contributors: Alexander Moriarty, Michael Ferguson, Russell Toris, Steffen Fuchs, Yuki Furuta
+
 0.7.1 (2016-02-27)
 ------------------
 * robot launch files publish base_scan_raw
