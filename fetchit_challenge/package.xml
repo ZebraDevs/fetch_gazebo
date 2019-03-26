@@ -4,9 +4,18 @@
   <version>0.0.0</version>
   <description>The fetchit_challenge package</description>
 
+  <author>Miguel Angel Rodriguez</author>
   <maintainer email="duckfrost@theconstructsim.com">RDaneelOlivaw</maintainer>
+  <maintainer email="amoriarty@fetchrobotics.com">Alex Moriarty</maintainer>
+  <maintainer email="narora@fetchrobotics.com">Niharika Arora</maintainer>
+  <maintainer email="selliott@fetchrobotics.com">Sarah Elliott</maintainer>
 
-  <license>TODO</license>
+  <license>BSD</license>
+  <url type="wiki">http://ros.org/wiki/fetch_gazebo</url>
+  <url type="website">https://opensource.fetchrobotics.com/competition</url>
+  <url type="documentation">https://docs.fetchrobotics.com/gazebo.html#launch-it-on-rosds</url>
+  <url type="bugtracker">https://github.com/fetchrobotics/fetch_gazebo/issues</url>
+  <url type="repository">https://github.com/fetchrobotics/fetch_gazebo</url>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>gazebo_ros</build_depend>
