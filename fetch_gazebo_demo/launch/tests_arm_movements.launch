@@ -1,0 +1,14 @@
+<launch>
+
+  <!-- Start MoveIt -->
+  <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
+    <arg name="info" value="true"/><!-- publish grasp markers -->
+  </include>
+
+  <!-- Drive to the table, pick stuff up -->
+
+  <node name="move_fetch" pkg="fetch_gazebo_demo" type="tests_arm_movements.py" output="screen" />
+
+
+
+</launch>
