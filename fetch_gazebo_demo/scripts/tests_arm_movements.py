@@ -272,8 +272,6 @@ def friction_base_tests():
 
     side = "LEFT"
 
-    raw_input("Start...")
-
     rate_obj = rospy.Rate(1)
     while not rospy.is_shutdown():
 
@@ -294,7 +292,6 @@ def move_tests():
 
     move_fetch_obj = MoveFetch()
 
-    raw_input("Start...")
     # Move P1
 
     move_fetch_obj.move_manager(pose_requested=[],
