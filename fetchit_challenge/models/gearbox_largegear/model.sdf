@@ -43,7 +43,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://gearbox_largegear/meshes/largeGear_v2.dae</uri>
+              <uri>model://gearbox_largegear/meshes/largeGear_v4.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
