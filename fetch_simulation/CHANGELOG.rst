@@ -2,6 +2,9 @@
 Changelog for package fetch_simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.7.2 (2019-03-26)
 ------------------
 * [package.xml] sync versions to 0.7.1 for indigo

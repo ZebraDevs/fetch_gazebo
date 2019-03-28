@@ -2,6 +2,21 @@
 Changelog for package fetchit_challenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#64 <https://github.com/fetchrobotics/fetch_gazebo/issues/64>`_ from moriarty/indigo-backports
+* [FetchIt!] Don't find_package an exec_depend
+* [fetchit] catkin depends and installation (`#58 <https://github.com/fetchrobotics/fetch_gazebo/issues/58>`_)
+  The models, scripts and launch files were not installed. Fixes `#57 <https://github.com/fetchrobotics/fetch_gazebo/issues/57>`_
+* [FetchIt!] fix the stl collision scales (`#60 <https://github.com/fetchrobotics/fetch_gazebo/issues/60>`_)
+  Added rescaled stls with corrected origins that generated issue that seems they were no collisions but in fact they were decentered and huge.
+  This fixes `#56 <https://github.com/fetchrobotics/fetch_gazebo/issues/56>`_
+* [FetchIt!] Model updates for new largeGear (`#51 <https://github.com/fetchrobotics/fetch_gazebo/issues/51>`_)
+  * This fixes `#50 <https://github.com/fetchrobotics/fetch_gazebo/issues/50>`_ in part, the stl files
+  * These changes correspond to `fetchrobotics/fetchit#2 <https://github.com/fetchrobotics/fetchit/issues/2>`_
+  * Added updated dae versions with rescaling to correct dimensions and same colours as previous versions
+* Contributors: Alexander Moriarty, Carl Saldanha, RDaneelOlivav
+
 0.7.2 (2019-03-26)
 ------------------
 * [package.xml] sync versions to 0.7.1 for indigo
