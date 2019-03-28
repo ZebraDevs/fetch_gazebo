@@ -3,7 +3,6 @@ project(fetchit_challenge)
 
 find_package(catkin REQUIRED COMPONENTS
   controller_manager
-  effort_controllers
   fetch_gazebo
   gazebo_ros
   robot_state_publisher
