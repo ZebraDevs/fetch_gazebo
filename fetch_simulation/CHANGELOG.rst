@@ -2,6 +2,9 @@
 Changelog for package fetch_simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.8.1 (2019-03-26)
 ------------------
 * [fetch_simulation] fix filename & CMakeLists.txt

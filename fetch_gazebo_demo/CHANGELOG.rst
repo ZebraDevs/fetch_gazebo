@@ -2,6 +2,9 @@
 Changelog for package fetch_gazebo_demo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.8.1 (2019-03-26)
 ------------------
 * This release fast forwarded the gazebo7 branch and reverted the breaking changes from gazebo9
