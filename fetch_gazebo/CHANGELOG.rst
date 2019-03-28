@@ -2,6 +2,30 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Improved wheel frictions (`#59 <https://github.com/fetchrobotics/fetch_gazebo/issues/59>`_)
+* fetch_gazebo: add casters to fetch.gazebo.xacro (`#49 <https://github.com/fetchrobotics/fetch_gazebo/issues/49>`_)
+    This adds 4 casters to the gazebo model, and updates the physics params.
+    This should fix `#31 <https://github.com/fetchrobotics/fetch_gazebo/issues/31>`_ and fix `#35 <https://github.com/fetchrobotics/fetch_gazebo/issues/35>`_
+    This is related to `#37 <https://github.com/fetchrobotics/fetch_gazebo/issues/37>`_
+* [package.xml] adds: license(BSD), author, maintainers (`#45 <https://github.com/fetchrobotics/fetch_gazebo/issues/45>`_)
+    * [package.xml] update maintainers
+    * [fetchit_challenge] adds license(BSD), author, maintainers
+    * [fetchit_challenge] add <url> tags to package.xml
+* [CMake/Catkin] fetch_gazebo install headers (`#43 <https://github.com/fetchrobotics/fetch_gazebo/issues/43>`_)
+    catkin_make_isolated --install would fail because we were not installing the header files
+    This fixes `#42 <https://github.com/fetchrobotics/fetch_gazebo/issues/42>`_
+* [CMake][package] Clean CMake warnings and REP-140 (`#29 <https://github.com/fetchrobotics/fetch_gazebo/issues/29>`_)
+    This cleans up some, but misses one warning- might be coming from gazebo itself.
+    Also moved to package.xml format 2
+* Merge pull request `#25 <https://github.com/fetchrobotics/fetch_gazebo/issues/25>`_ from stfuchs/fix/melodic-rosdep
+    change rosdep from gazebo7 to gazebo9
+* Merge pull request `#24 <https://github.com/fetchrobotics/fetch_gazebo/issues/24>`_ from mikeferguson/gazebo9
+    fixes for gazebo9 (melodic)
+* updates for gazebo7
+* Contributors: Alex Moriarty, Michael Ferguson, Miguel Angel Rodríguez, Russell Toris, Steffen Fuchs
+
 0.8.0 (2016-12-27)
 ------------------
 * update rosdeps for gazebo5
