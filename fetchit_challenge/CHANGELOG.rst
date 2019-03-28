@@ -2,8 +2,8 @@
 Changelog for package fetchit_challenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.3 (2019-03-28)
+------------------
 * Merge pull request `#64 <https://github.com/fetchrobotics/fetch_gazebo/issues/64>`_ from moriarty/indigo-backports
 * [FetchIt!] Don't find_package an exec_depend
 * [fetchit] catkin depends and installation (`#58 <https://github.com/fetchrobotics/fetch_gazebo/issues/58>`_)
