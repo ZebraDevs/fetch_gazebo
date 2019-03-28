@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- Start MoveIt -->
+  <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
+    <arg name="info" value="true"/><!-- publish grasp markers -->
+  </include>
+
+  <!-- TODO: create a proper ROS test for this -->
+  <node name="test_fetch_arm_movements" pkg="fetch_gazebo_demo" type="tests_arm_movements.py" output="screen" />
+
+</launch>
