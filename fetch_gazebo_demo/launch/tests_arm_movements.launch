@@ -5,10 +5,7 @@
     <arg name="info" value="true"/><!-- publish grasp markers -->
   </include>
 
-  <!-- Drive to the table, pick stuff up -->
-
-  <node name="move_fetch" pkg="fetch_gazebo_demo" type="tests_arm_movements.py" output="screen" />
-
-
+  <!-- TODO: create a proper ROS test for this -->
+  <node name="test_fetch_arm_movements" pkg="fetch_gazebo_demo" type="tests_arm_movements.py" output="screen" />
 
 </launch>

@@ -8,6 +8,7 @@ install(
   PROGRAMS
     scripts/demo.py
     scripts/pick_place_demo.py
+    scripts/tests_arm_movements.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
