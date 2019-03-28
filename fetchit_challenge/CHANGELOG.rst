@@ -2,8 +2,8 @@
 Changelog for package fetchit_challenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.0 (2019-03-28)
+------------------
 * [FetchIt!] Don't find_package an exec_depend
 * [package.xml] sync versions to 0.8.0
 * [fetchit] catkin depends and installation (`#58 <https://github.com/fetchrobotics/fetch_gazebo/issues/58>`_)

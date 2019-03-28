@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.0 (2019-03-28)
+------------------
 * Improved wheel frictions (`#59 <https://github.com/fetchrobotics/fetch_gazebo/issues/59>`_)
 * fetch_gazebo: add casters to fetch.gazebo.xacro (`#49 <https://github.com/fetchrobotics/fetch_gazebo/issues/49>`_)
     This adds 4 casters to the gazebo model, and updates the physics params.

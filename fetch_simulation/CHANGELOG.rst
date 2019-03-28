@@ -2,8 +2,8 @@
 Changelog for package fetch_simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.0 (2019-03-28)
+------------------
 * [fetch_simulation] fix filename & CMakeLists.txt
     cherry-pick 730051a64df815ed61b6d3fb012fb5a225ae2e2e
 * [fetch_simulation] new meta-package (`#52 <https://github.com/fetchrobotics/fetch_gazebo/issues/52>`_)

@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo_demo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.0 (2019-03-28)
+------------------
 * Improved pick place frictions (`#59 <https://github.com/fetchrobotics/fetch_gazebo/issues/59>`_)
     * Added higher frictions to avoid the base movements when moving the arm, and also added a simple pick and place environment for fast testing
     * Added a script that can be used to test basic movement with fetch arm and gripper and also test that the friction is enough that movement of the arm wont affect it
