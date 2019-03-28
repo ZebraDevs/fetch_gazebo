@@ -17,7 +17,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://gearbox_top/meshes/gearBoxTop_v1.stl</uri>
+              <uri>model://gearbox_top/meshes/gearBoxTop_v3.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -33,7 +33,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://gearbox_top/meshes/gearBoxTop_v1.dae</uri>
+              <uri>model://gearbox_top/meshes/gearBoxTop_v3.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
