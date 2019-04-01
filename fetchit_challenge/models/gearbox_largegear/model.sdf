@@ -17,7 +17,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://gearbox_largegear/meshes/largeGear_v4.stl</uri>
+              <uri>model://gearbox_largegear/meshes/largeGear_v5.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -43,7 +43,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://gearbox_largegear/meshes/largeGear_v4.dae</uri>
+              <uri>model://gearbox_largegear/meshes/largeGear_v5.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
