@@ -1,7 +1,5 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.7.2)
 project(fetch_gazebo)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
 find_package(Boost REQUIRED)
 find_package(gazebo REQUIRED)
