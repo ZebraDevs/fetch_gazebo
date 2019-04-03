@@ -52,6 +52,24 @@
       <name>screw_bin_pick_station</name>
       <pose>0.04929 1.22163 0.0 0 0 0</pose>
     </include>
+    <include>
+      <uri>model://demo_cube</uri>
+      <name>demo_cube_blue</name>
+      <pose>-0.342536 1.08963 0.829446 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://demo_cube_green</uri>
+      <name>demo_cube_green</name>
+      <pose>0.3748 1.102 0.829446 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>model://50mmbin_green</uri>
+      <name>50mmbin_green</name>
+      <pose>-0.134245 1.2 0.801 0 0 0</pose>
+    </include>
 
      <include>
       <uri>model://fetchit_table</uri>

@@ -84,6 +84,12 @@
       <pose>3.597790 -2.3 0.801 0 0 0</pose>
     </include>
 
+
+    <include>
+      <uri>model://demo_cube</uri>
+      <pose>3.8 -5.05 1.977855 0 0 1.57</pose>
+    </include>
+
     <!-- Lights -->
     <!--
     <include>
