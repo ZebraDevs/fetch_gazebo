@@ -2,8 +2,8 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.1 (2019-04-04)
+------------------
 * Cleanup dependencies (`#68 <https://github.com/fetchrobotics/fetch_gazebo/issues/68>`_)
 * cmake_minimum_required(VERSION 3.7.2) & C++14 (`#67 <https://github.com/fetchrobotics/fetch_gazebo/issues/67>`_)
     - Bump the minimum CMake version, to fix a CMake warning.

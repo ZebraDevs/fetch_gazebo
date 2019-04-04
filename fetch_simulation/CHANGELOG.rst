@@ -2,8 +2,8 @@
 Changelog for package fetch_simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.1 (2019-04-04)
+------------------
 * catkin_make only supports cmake 2.8.3 for meta-pkg (`#70 <https://github.com/fetchrobotics/fetch_gazebo/issues/70>`_)
     This fixes `#69 <https://github.com/fetchrobotics/fetch_gazebo/issues/69>`_
 * cmake_minimum_required(VERSION 3.7.2) & C++14 (`#67 <https://github.com/fetchrobotics/fetch_gazebo/issues/67>`_)
