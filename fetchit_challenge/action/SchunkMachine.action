@@ -1,0 +1,7 @@
+uint32 OPEN=0
+uint32 CLOSE=1
+uint32 state 
+---
+bool success
+string message
+---
