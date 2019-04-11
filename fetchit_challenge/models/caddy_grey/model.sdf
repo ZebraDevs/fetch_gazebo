@@ -17,7 +17,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://romanoff_small_utility_caddy/meshes/Romanoff_Small_Utility_Caddy_cof.stl</uri>
+              <uri>model://caddy_grey/meshes/Romanoff_Small_Utility_Caddy_cof.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -34,7 +34,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://romanoff_small_utility_caddy/meshes/Romanoff_Small_Utility_Caddy_cof_grey.dae</uri>
+              <uri>model://caddy_grey/meshes/Romanoff_Small_Utility_Caddy_cof_grey.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
