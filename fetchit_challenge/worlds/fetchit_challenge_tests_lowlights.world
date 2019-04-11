@@ -15,8 +15,8 @@
     </include>
 
     <include>
-      <uri>model://romanoff_small_utility_caddy</uri>
-      <name>romanoff_small_utility_caddy1</name>
+      <uri>model://caddy_green</uri>
+      <name>caddy_green1</name>
       <pose>4.609024 -3.594681 0.814290 0 0 0</pose>
     </include>
 
