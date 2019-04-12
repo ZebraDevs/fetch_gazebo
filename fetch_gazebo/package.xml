@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>fetch_gazebo</name>
-  <version>0.9.0</version>
+  <version>0.9.1</version>
   <description>
     Gazebo package for Fetch.
   </description>
@@ -15,7 +15,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <build_depend>angles</build_depend>
-  <build_depend>libgazebo9-dev</build_depend>
+  <build_depend>gazebo_dev</build_depend>
 
   <depend>control_toolbox</depend>
   <depend>boost</depend>

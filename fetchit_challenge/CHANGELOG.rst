@@ -2,6 +2,15 @@
 Changelog for package fetchit_challenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.9.1 (2019-04-04)
+------------------
+* Cleanup dependencies (`#68 <https://github.com/fetchrobotics/fetch_gazebo/issues/68>`_)
+* cmake_minimum_required(VERSION 3.7.2) & C++14 (`#67 <https://github.com/fetchrobotics/fetch_gazebo/issues/67>`_)
+    - Bump the minimum CMake version, to fix a CMake warning.
+    - Remove explicit CMAKE_CXX_FLAGS c++0x because the default is now C++14
+* [FetchIt!] Tapered large gear (`#63 <https://github.com/fetchrobotics/fetch_gazebo/issues/63>`_)
+* Contributors: Alex Moriarty, Sarah Elliott, Miguel Angel Rodríguez
+
 0.9.0 (2019-03-28)
 ------------------
 * [FetchIt!] Don't find_package an exec_depend

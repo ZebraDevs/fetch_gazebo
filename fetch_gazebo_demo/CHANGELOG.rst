@@ -2,6 +2,13 @@
 Changelog for package fetch_gazebo_demo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.9.1 (2019-04-04)
+------------------
+* cmake_minimum_required(VERSION 3.7.2) & C++14 (`#67 <https://github.com/fetchrobotics/fetch_gazebo/issues/67>`_)
+    - Bump the minimum CMake version, to fix a CMake warning.
+    - Remove explicit CMAKE_CXX_FLAGS c++0x because the default is now C++14
+* Contributors: Alex Moriarty
+
 0.9.0 (2019-03-28)
 ------------------
 * Improved pick place frictions (`#59 <https://github.com/fetchrobotics/fetch_gazebo/issues/59>`_)
