@@ -38,6 +38,56 @@
       <pose>0.815 1.28179 0.0 0 0 0</pose>
     </include>
 
+    <include>
+      <uri>model://romanoff_small_utility_caddy</uri>
+      <name>romanoff_small_utility_caddy1</name>
+      <pose>0.0 -1.20441 0.826729 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>model://50mmbin</uri>
+      <name>50mmbin</name>
+      <pose>1.1789 -0.69649 0.787679 0 0 -1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://gearbox_bolt</uri>
+      <name>gearbox_bolt1</name>
+      <pose>1.19481 -0.727808 0.802789 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://gearbox_bolt</uri>
+      <name>gearbox_bolt2</name>
+      <pose>1.11789 -0.669909 0.802789 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>model://100mmbin</uri>
+      <name>100mmbin1</name>
+      <pose>-0.301542 1.17623 0.787679 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://gearbox_bottom</uri>
+      <name>gearbox_bottom1</name>
+      <pose>-0.319115 1.21719 0.864438 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://gearbox_top</uri>
+      <name>gearbox_top1</name>
+      <pose>-0.323154 1.15124 0.826531 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://dropoff_box</uri>
+      <name>dropoff_box1</name>
+      <pose>-1.15754 1.04702 0 0 0 0</pose>
+    </include>
+
 
     <light name='user_point_light_0' type='point'>
       <pose frame=''>1.0 1.0 3.5 0 0 0</pose>
