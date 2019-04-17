@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version='1.4'>
-  <model name="romanoff_small_utility_caddy">
+  <model name="caddy_yellow">
       <static>0</static>
       <link name='link'>
         <inertial>
@@ -17,7 +17,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://romanoff_small_utility_caddy/meshes/Romanoff_Small_Utility_Caddy_cof.stl</uri>
+              <uri>model://caddy_yellow/meshes/Romanoff_Small_Utility_Caddy_cof.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -34,7 +34,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://romanoff_small_utility_caddy/meshes/Romanoff_Small_Utility_Caddy_cof.dae</uri>
+              <uri>model://caddy_yellow/meshes/Romanoff_Small_Utility_Caddy_cof_yellow.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
