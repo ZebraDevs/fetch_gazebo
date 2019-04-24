@@ -40,8 +40,22 @@
     <include>
       <uri>model://caddy_green</uri>
       <name>caddy_green1</name>
-      <pose>0.0 -1.20441 0.826729 0 0 0</pose>
+      <pose>0.168355 -1.20441 0.826729 0 0 0</pose>
     </include>
+
+    <include>
+      <uri>model://caddy_red</uri>
+      <name>caddy_red1</name>
+      <pose>-0.113059 -1.20441 0.826729 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://caddy_yellow</uri>
+      <name>caddy_yellow1</name>
+      <pose>-0.414898 -1.20441 0.826729 0 0 0</pose>
+    </include>
+
+
 
 
     <include>
