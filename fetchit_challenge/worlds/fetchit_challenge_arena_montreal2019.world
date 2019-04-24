@@ -2,7 +2,6 @@
 <sdf version="1.4">
   <world name="default">
 
-
     <include>
       <uri>model://ground_plane</uri>
       <pose>0 0 -0.005 0 0 0</pose>
@@ -38,12 +37,25 @@
       <pose>0.815 1.28179 0.0 0 0 0</pose>
     </include>
 
+    <include>
+      <uri>model://caddy_green</uri>
+      <name>caddy_green1</name>
+      <pose>0.168355 -1.20441 0.826729 0 0 0</pose>
+    </include>
 
     <include>
-      <uri>model://romanoff_small_utility_caddy</uri>
-      <name>romanoff_small_utility_caddy1</name>
-      <pose>0.0 -1.20441 0.826729 0 0 0</pose>
+      <uri>model://caddy_red</uri>
+      <name>caddy_red1</name>
+      <pose>-0.113059 -1.20441 0.826729 0 0 0</pose>
     </include>
+
+    <include>
+      <uri>model://caddy_yellow</uri>
+      <name>caddy_yellow1</name>
+      <pose>-0.414898 -1.20441 0.826729 0 0 0</pose>
+    </include>
+
+
 
 
     <include>
@@ -53,14 +65,14 @@
     </include>
 
     <include>
-      <uri>model://gearbox_bolt</uri>
-      <name>gearbox_bolt1</name>
+      <uri>model://gearbox_bolt_grey</uri>
+      <name>gearbox_bolt_grey1</name>
       <pose>1.19481 -0.727808 0.802789 0 0 0</pose>
     </include>
 
     <include>
-      <uri>model://gearbox_bolt</uri>
-      <name>gearbox_bolt2</name>
+      <uri>model://gearbox_bolt_grey</uri>
+      <name>gearbox_bolt_grey2</name>
       <pose>1.11789 -0.669909 0.802789 0 0 0</pose>
     </include>
 
@@ -72,14 +84,14 @@
     </include>
 
     <include>
-      <uri>model://gearbox_bottom</uri>
-      <name>gearbox_bottom1</name>
+      <uri>model://gearbox_bottom_grey</uri>
+      <name>gearbox_bottom_grey1</name>
       <pose>-0.319115 1.21719 0.864438 0 0 1.57</pose>
     </include>
 
     <include>
-      <uri>model://gearbox_top</uri>
-      <name>gearbox_top1</name>
+      <uri>model://gearbox_top_grey</uri>
+      <name>gearbox_top_grey1</name>
       <pose>-0.323154 1.15124 0.826531 0 0 0</pose>
     </include>
 

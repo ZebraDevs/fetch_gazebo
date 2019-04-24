@@ -1,4 +1,4 @@
-# Fetch Gazebo
+# Fetch Gazebo x
 
 This repository contains the Gazebo simulation for Fetch Robotics Fetch and
 Freight Research Edition Robots.

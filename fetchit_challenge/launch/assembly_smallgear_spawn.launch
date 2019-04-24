@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
 
-    <arg name="robot_name" default="gearbox_smallgear" />
+    <arg name="robot_name" default="gearbox_smallgear_grey" />
     <arg name="x" default="3.533216" />
     <arg name="y" default="-5.091161" />
     <arg name="z" default="0.8" />
     <arg name="roll" default="0"/>
     <arg name="pitch" default="0"/>
     <arg name="yaw" default="0.0" />
-    <arg name="sdf_robot_file" default="$(find fetchit_challenge)/models/gearbox_smallgear/model.sdf" />
+    <arg name="sdf_robot_file" default="$(find fetchit_challenge)/models/gearbox_smallgear_grey/model.sdf" />
 
 
     <node name="$(arg robot_name)_spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
