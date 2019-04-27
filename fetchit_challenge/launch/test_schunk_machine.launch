@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <!-- Spawn the Schunk Machine in an empty world -->
+
+    <arg name="paused" default="false"/>
+    <arg name="verbose" default="true"/>
+    <arg name="physics" default="ode"/>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="verbose" value="$(arg verbose)"/>
+        <arg name="physics" default="$(arg physics)"/>
+    </include>
+
+    <include file="$(find fetchit_challenge)/launch/shunk_machine_start.launch">
+        <arg name="x" value="2.0" />
+        <arg name="y" value="2.0" />
+        <arg name="z" value="0.0" />
+        <arg name="roll"  value="0.0"/>
+        <arg name="pitch" value="0.0"/>
+        <arg name="yaw"   value="0.0" />
+    </include>
+
+</launch>

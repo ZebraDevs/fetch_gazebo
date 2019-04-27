@@ -10,6 +10,7 @@
 
   <!-- Oh, you wanted a robot? -->
   <include file="$(find fetch_gazebo)/launch/include/$(arg robot)_pp.launch.xml" >
+  <!-- include file="$(find fetch_gazebo)/launch/include/$(arg robot).launch.xml" --> <!-- Arm tucked, like Fetch Playground demo -->
     <arg name="x" value="$(arg x)" />
     <arg name="y" value="$(arg y)" />
     <arg name="z" value="$(arg z)" />
