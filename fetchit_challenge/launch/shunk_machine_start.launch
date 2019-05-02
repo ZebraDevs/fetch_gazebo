@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
 
+    <!--
+    The top-level launch file for the Schunk Machine,
+    which is modeled in Gazebo as another robot.
+
+    This loads everything in a separate namespace:
+    e.g. '/schunk_machine/robot_description'
+         '/schunk_machine/robot_state_publisher'
+         '/schunk_machine/joint_states'
+    -->
+
     <arg name="x" default="3.905060" />
     <arg name="y" default="-5.281311" />
     <arg name="z" default="0.0" />
@@ -8,6 +18,9 @@
     <arg name="pitch" default="0"/>
     <arg name="yaw" default="1.57" />
 
+
+    <group ns="schunk_machine">
+    <param name="tf_prefix" value="schunk_machine" />
 
     <include file="$(find fetchit_challenge)/launch/shunk_machine_spawn.launch">
         <arg name="x" value="$(arg x)" />
@@ -18,4 +31,7 @@
         <arg name="yaw" value="$(arg yaw)" />
     </include>
     <include file="$(find fetchit_challenge)/launch/shunk_machine_control.launch"/>
+
+    </group>
+
 </launch>

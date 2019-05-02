@@ -4,8 +4,10 @@
 
 	<gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/shunk_machine</robotNamespace>
-			<robotParam>/robot_description_shunk_machine</robotParam>
+            <robotNamespace>schunk_machine</robotNamespace>
+
+            <!-- You must spawn this URDF in a ROS namespace, so it doesn't clash with the primary robot -->
+            <robotParam>robot_description</robotParam>
         </plugin>
     </gazebo>
 

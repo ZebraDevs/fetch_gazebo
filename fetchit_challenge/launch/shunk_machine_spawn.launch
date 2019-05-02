@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
 
+    <!--
+    This file is included by 'shunk_machine_start.launch'
+    and everything is relative to the namespace: '/schunk_machine/'
+    -->
+
     <arg name="x" default="0" />
     <arg name="y" default="0" />
     <arg name="z" default="0" />
@@ -11,11 +16,10 @@
     <arg name="urdf_robot_file" default="$(find fetchit_challenge)/urdf/shunk_machine.urdf" />
     <arg name="robot_name" default="shunk_machine" />
 
-    <!-- This Version was created due to some errors seen in the V1 that crashed GAzebo or went too slow in spawn -->
     <!-- Load the URDF into the ROS Parameter Server -->
-    <param name="/robot_description_shunk_machine" command="cat $(arg urdf_robot_file)" />
+    <param name="robot_description" command="cat $(arg urdf_robot_file)" />
 
         <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
         <node name="$(arg robot_name)_urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-urdf -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw) -model $(arg robot_name) -param /robot_description_shunk_machine"/>
+        args="-urdf -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw) -model $(arg robot_name) -param robot_description"/>
 </launch>
