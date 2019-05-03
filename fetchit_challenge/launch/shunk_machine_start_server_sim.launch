@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="shunk_version" default="simulated" />
+    <node name="shunk_machine_start_server_sim_node"
+          pkg="fetchit_challenge"
+          type="schunk_machine_server.py"
+          respawn="false"
+          output="screen"
+          args="$(arg shunk_version)"/>
+</launch>

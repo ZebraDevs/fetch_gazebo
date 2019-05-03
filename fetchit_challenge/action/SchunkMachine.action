@@ -1,5 +1,7 @@
 uint32 OPEN=0
 uint32 CLOSE=1
+uint32 START_OPERATION=2
+uint32 END_OPERATION=3
 uint32 state 
 ---
 bool success

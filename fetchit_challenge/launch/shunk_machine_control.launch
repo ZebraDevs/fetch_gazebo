@@ -18,6 +18,9 @@
         output="screen" args="joint_state_controller
                               lathe_joint_velocity_controller
                               door_joint_velocity_controller
+                              lathe_gripper1_joint_position_controller
+                              lathe_gripper2_joint_position_controller
+                              lathe_gripper3_joint_position_controller
                               --shutdown-timeout 3">
   </node>
 

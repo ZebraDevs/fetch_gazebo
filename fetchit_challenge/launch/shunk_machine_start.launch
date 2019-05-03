@@ -20,17 +20,18 @@
 
 
     <group ns="schunk_machine">
-    <param name="tf_prefix" value="schunk_machine" />
+        <param name="tf_prefix" value="schunk_machine" />
 
-    <include file="$(find fetchit_challenge)/launch/shunk_machine_spawn.launch">
-        <arg name="x" value="$(arg x)" />
-        <arg name="y" value="$(arg y)" />
-        <arg name="z" value="$(arg z)" />
-        <arg name="roll" value="$(arg roll)"/>
-        <arg name="pitch" value="$(arg pitch)"/>
-        <arg name="yaw" value="$(arg yaw)" />
-    </include>
-    <include file="$(find fetchit_challenge)/launch/shunk_machine_control.launch"/>
+        <include file="$(find fetchit_challenge)/launch/shunk_machine_spawn.launch">
+            <arg name="x" value="$(arg x)" />
+            <arg name="y" value="$(arg y)" />
+            <arg name="z" value="$(arg z)" />
+            <arg name="roll" value="$(arg roll)"/>
+            <arg name="pitch" value="$(arg pitch)"/>
+            <arg name="yaw" value="$(arg yaw)" />
+        </include>
+        <include file="$(find fetchit_challenge)/launch/shunk_machine_control.launch"/>
+        <include file="$(find fetchit_challenge)/launch/shunk_machine_start_server_sim.launch"/>
 
     </group>
 
