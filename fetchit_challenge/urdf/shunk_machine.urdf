@@ -17,7 +17,7 @@
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_nodoor_nolathe.dae"/>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_nodoor_nolathe_v2.dae"/>
 			</geometry>
 	   </visual>
 		<collision>
@@ -43,7 +43,7 @@
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_door_transparent_logo.dae"/>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_door_transparent_nologo.dae"/>
 			</geometry>
 	   </visual>
   		<collision>
@@ -69,9 +69,15 @@
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_centered.dae"/>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_centered_base.dae"/>
 			</geometry>
 	   </visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_base_joint_colision.stl"/>
+			</geometry>
+	   </collision>
   		<inertial>
 		    <origin xyz="0 0 0" rpy="0 0 0"/>
         	<mass value="2.5"/>
@@ -85,7 +91,114 @@
         <mu2>0.5</mu2>
     </gazebo>
 
+
+	<link name="lathe_gripper1_link">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_gripper.dae"/>
+			</geometry>
+	   </visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_gripper_collision.stl"/>
+			</geometry>
+	   </collision>
+  		<inertial>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+        	<mass value="0.5"/>
+        	<inertia ixx="6.46237297354e-05" ixy="0.0" ixz="0.0" iyy="0.000163168296934" iyz="0.0" izz="0.000152952440802"/>
+        </inertial>
+	</link>
+	<gazebo reference="lathe_gripper1_link">
+        <kp>1000.0</kp>
+        <kd>1000.0</kd>
+        <mu1>1000.0</mu1>
+        <mu2>1000.0</mu2>
+    </gazebo>
+
+	<link name="lathe_gripper2_link">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_gripper.dae"/>
+			</geometry>
+	   </visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_gripper_collision.stl"/>
+			</geometry>
+	   </collision>
+  		<inertial>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+        	<mass value="0.5"/>
+        	<inertia ixx="6.46237297354e-05" ixy="0.0" ixz="0.0" iyy="0.000163168296934" iyz="0.0" izz="0.000152952440802"/>
+        </inertial>
+	</link>
+	<gazebo reference="lathe_gripper2_link">
+        <kp>1000.0</kp>
+        <kd>1000.0</kd>
+        <mu1>1000.0</mu1>
+        <mu2>1000.0</mu2>
+    </gazebo>
+
+
+	<link name="lathe_gripper3_link">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_gripper.dae"/>
+			</geometry>
+	   </visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://fetchit_challenge/models/shunk_machine/meshes/shunk_machine_lathe_gripper_collision.stl"/>
+			</geometry>
+	   </collision>
+  		<inertial>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+        	<mass value="0.5"/>
+        	<inertia ixx="6.46237297354e-05" ixy="0.0" ixz="0.0" iyy="0.000163168296934" iyz="0.0" izz="0.000152952440802"/>
+        </inertial>
+	</link>
+	<gazebo reference="lathe_gripper3_link">
+        <kp>1000.0</kp>
+        <kd>1000.0</kd>
+        <mu1>1000.0</mu1>
+        <mu2>1000.0</mu2>
+    </gazebo>
+
 <!-- * * * Joint Definitions * * * -->
+	<joint name="lathe_gripper1_joint" type="prismatic">
+    	<parent link="lathe_link"/>
+    	<child link="lathe_gripper1_link"/>
+		<origin xyz="0.072422 0.0932665 0.0" rpy="0 3.1416 0"/>
+       	<limit lower="0.0" upper="0.02" effort="100.0" velocity="1.0"/>
+		<dynamics damping="0.0" friction="0.1"/>
+		<axis xyz="1 0 0"/>
+	</joint>
+
+	<joint name="lathe_gripper2_joint" type="prismatic">
+    	<parent link="lathe_link"/>
+    	<child link="lathe_gripper2_link"/>
+		<origin xyz="-0.036381 0.0932665 0.0635819" rpy="0 1.0472 0"/>
+       	<limit lower="0.0" upper="0.02" effort="100.0" velocity="1.0"/>
+		<dynamics damping="0.0" friction="0.1"/>
+		<axis xyz="1 0 0"/>
+	</joint>
+
+	<joint name="lathe_gripper3_joint" type="prismatic">
+    	<parent link="lathe_link"/>
+    	<child link="lathe_gripper3_link"/>
+		<origin xyz="-0.036381 0.0932665 -0.0635819" rpy="0 -1.0472 0"/>
+       	<limit lower="0.0" upper="0.02" effort="100.0" velocity="1.0"/>
+		<dynamics damping="0.0" friction="0.1"/>
+		<axis xyz="1 0 0"/>
+	</joint>
+
  	<joint name="lathe_joint" type="continuous">
     	<parent link="base_link"/>
     	<child link="lathe_link"/>
@@ -107,6 +220,42 @@
     </joint>
 
 <!-- * * * Transmission Definitions * * * -->
+	<transmission name="lathe_gripper1_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="lathe_gripper1_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="lathe_gripper1_jointMotor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+
+	<transmission name="lathe_gripper2_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="lathe_gripper2_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="lathe_gripper2_jointMotor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+
+	<transmission name="lathe_gripper3_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="lathe_gripper3_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="lathe_gripper3_jointMotor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+
 	<transmission name="lathe_joint_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="lathe_joint">
