@@ -1,0 +1,6 @@
+uint32 TRIG=0
+uint32 trigger
+---
+bool success
+string message
+---
