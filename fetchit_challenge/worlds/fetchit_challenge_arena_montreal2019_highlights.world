@@ -84,7 +84,17 @@
     <include>
       <uri>model://gearbox_top_grey</uri>
       <name>gearbox_top_grey1</name>
-      <pose>-0.323154 1.15124 0.826531 0 0 0</pose>
+      <pose>-0.646720 1.331895 0.801285 0.000001 0.173592 1.290266</pose>
+    </include>
+    <include>
+      <uri>model://gearbox_top_grey</uri>
+      <name>gearbox_top_grey2</name>
+      <pose>-0.534968 1.220576 0.796855 -3.141591 -0.000002 0.323833</pose>
+    </include>
+    <include>
+      <uri>model://gearbox_top_grey</uri>
+      <name>gearbox_top_grey3</name>
+      <pose>-0.480600 1.380870 0.801318 0.034228 0.171042 -0.554048</pose>
     </include>
 
     <light name='user_point_light_0' type='point'>
