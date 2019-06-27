@@ -66,13 +66,6 @@
     </include>
 
     <include>
-      <uri>model://dropoff_box</uri>
-      <name>dropoff_box1</name>
-      <pose>2.445290 -2.956990 0.011069 0 0 0</pose>
-    </include>
-
-
-    <include>
       <uri>model://100mmbin</uri>
       <name>100mmbin1</name>
       <pose>2.497005 -4.123425 0.801 0 0 1.57</pose>
