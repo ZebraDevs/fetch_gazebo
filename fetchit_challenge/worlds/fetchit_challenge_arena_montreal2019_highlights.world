@@ -78,7 +78,22 @@
     <include>
       <uri>model://gearbox_bottom_grey</uri>
       <name>gearbox_bottom_grey1</name>
-      <pose>-0.319115 1.21719 0.864438 0 0 1.57</pose>
+      <pose>-0.024991 1.128376 0.784992 0 0 3.105351</pose>
+    </include>
+    <include>
+      <uri>model://gearbox_bottom_grey</uri>
+      <name>gearbox_bottom_grey2</name>
+      <pose>0.070919 1.347065 0.804964 -1.570796 0 2.317278</pose>
+    </include>
+    <include>
+      <uri>model://gearbox_bottom_grey</uri>
+      <name>gearbox_bottom_grey3</name>
+      <pose>-0.173732 1.354286 0.837371 3.141545 0 -2.437420</pose>
+    </include>
+    <include>
+      <uri>model://gearbox_bottom_grey</uri>
+      <name>gearbox_bottom_grey4</name>
+      <pose>-0.165214 1.215589 0.804963 -1.570796 0 -2.472675</pose>
     </include>
 
     <include>
