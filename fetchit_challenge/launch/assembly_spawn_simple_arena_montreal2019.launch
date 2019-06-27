@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-    <include file="$(find fetchit_challenge)/launch/assembly_largegear_spawn.launch">
-        <arg name="x" value="-0.94" />
-        <arg name="y" value="0.0" />
+    <include file="$(find fetchit_challenge)/launch/assembly_largegear_spawn.launch" ns="large_gear_0">
+        <arg name="robot_name" default="large_gear_0"/>
+        <arg name="x" value="-1.028726" />
+        <arg name="y" value="-0.221733" />
     </include>
-    <include file="$(find fetchit_challenge)/launch/assembly_smallgear_spawn.launch">
-        <arg name="x" value="-0.94" />
-        <arg name="y" value="-0.32" />
+    <include file="$(find fetchit_challenge)/launch/assembly_largegear_spawn.launch" ns="large_gear_1">
+	<arg name="robot_name" default="large_gear_1"/>
+        <arg name="x" value="-0.928792" />
+        <arg name="y" value="-0.282342" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/assembly_largegear_spawn.launch" ns="large_gear_2">
+	<arg name="robot_name" default="large_gear_2"/>
+        <arg name="x" value="-1.036185" />
+        <arg name="y" value="-0.038866" />
+	<arg name="roll" value="1" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/assembly_largegear_spawn.launch" ns="large_gear_3">
+        <arg name="robot_name" default="large_gear_3"/>
+	<arg name="x" value="-0.920092" />
+        <arg name="y" value="-0.061508" />
+	<arg name="roll" value="1" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/assembly_smallgear_spawn.launch" ns="small_gear_0">
+        <arg name="robot_name" default="small_gear_0"/>
+        <arg name="x" value="-0.918143" />
+        <arg name="y" value="-0.616502" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/assembly_smallgear_spawn.launch" ns="small_gear_1">
+        <arg name="robot_name" default="small_gear_1"/>
+        <arg name="x" value="-0.987534" />
+        <arg name="y" value="-0.584198" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/assembly_smallgear_spawn.launch" ns="small_gear_2">
+        <arg name="robot_name" default="small_gear_2"/>
+        <arg name="x" value="-0.902303" />
+        <arg name="y" value="-0.545914" />
+    </include>
+    <include file="$(find fetchit_challenge)/launch/assembly_smallgear_spawn.launch" ns="small_gear_3">
+        <arg name="robot_name" default="small_gear_3"/>
+        <arg name="x" value="-0.949333" />
+        <arg name="y" value="-0.499475" />
+        <arg name="roll" value="1" />
     </include>
 </launch>
