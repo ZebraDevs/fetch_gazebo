@@ -2,6 +2,9 @@
 Changelog for package fetch_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.1 (2019-04-04)
 ------------------
 * Cleanup dependencies (`#68 <https://github.com/fetchrobotics/fetch_gazebo/issues/68>`_)
