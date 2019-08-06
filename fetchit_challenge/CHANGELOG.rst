@@ -2,8 +2,8 @@
 Changelog for package fetchit_challenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.2 (2019-08-06)
+------------------
 * Merge pull request `#93 <https://github.com/fetchrobotics/fetch_gazebo/issues/93>`_ from fetchrobotics/sick
   Adds sick camera interface
 * Corrected Inertias to solve standing bolts (`#92 <https://github.com/fetchrobotics/fetch_gazebo/issues/92>`_)
