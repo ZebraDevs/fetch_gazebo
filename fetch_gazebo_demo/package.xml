@@ -5,9 +5,12 @@
     Demos for fetch_gazebo package.
   </description>
   <author>Michael Ferguson</author>
-  <maintainer email="amoriarty@fetchrobotics.com">Alex Moriarty</maintainer>
   <maintainer email="narora@fetchrobotics.com">Niharika Arora</maintainer>
   <maintainer email="selliott@fetchrobotics.com">Sarah Elliott</maintainer>
+  <maintainer email="csaldanha@fetchrobotics.com">Carl Saldanha</maintainer>
+  <maintainer email="erelson@fetchrobotics.com">Eric Relson</maintainer>
+  <maintainer email="opensource@fetchrobotics.com">Fetch Robotics Open Source Team</maintainer>
+
   <license>BSD</license>
   <url>http://ros.org/wiki/fetch_gazebo_demo</url>
   
