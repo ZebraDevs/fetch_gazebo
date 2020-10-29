@@ -16,4 +16,15 @@
   <!-- Drive to the table, pick stuff up -->
   <node name="demo" pkg="fetch_gazebo_demo" type="demo.py" output="screen" />
 
+  <!-- set rosparams to increase demo success rate -->
+  <rosparam>
+    <!-- Set inflation radius smaller inflation than default for fetch to come through narrow door -->
+    /move_base/local_costmap/inflater/inflation_radius: 0.3
+    /move_base/global_costmap/inflater/inflation_radius: 0.3
+    <!-- Set fetch's amcl pose at the origin of the map at the start of this demo, even if rosmaster was not killed and previous pose is saved -->
+    /amcl/initial_pose_x: 0.0
+    /amcl/initial_pose_y: 0.0
+    /amcl/initial_pose_a: 0.0
+  </rosparam>
+
 </launch>
