@@ -136,9 +136,9 @@ class GraspingClient(object):
 
         # remove previous objects
         for name in self.scene.getKnownCollisionObjects():
-            self.scene.removeCollisionObject(name, False)
+            self.scene.removeCollisionObject(name, use_service=False)
         for name in self.scene.getKnownAttachedObjects():
-            self.scene.removeAttachedObject(name, False)
+            self.scene.removeAttachedObject(name, use_service=False)
         self.scene.waitForSync()
 
         # insert objects to scene
@@ -149,7 +149,7 @@ class GraspingClient(object):
             self.scene.addSolidPrimitive(obj.object.name,
                                          obj.object.primitives[0],
                                          obj.object.primitive_poses[0],
-                                         wait = False)
+                                         use_service=False)
 
         for obj in find_result.support_surfaces:
             # extend surface to floor, and make wider since we have narrow field of view
@@ -163,8 +163,7 @@ class GraspingClient(object):
             self.scene.addSolidPrimitive(obj.name,
                                          obj.primitives[0],
                                          obj.primitive_poses[0],
-                                         wait = False)
-
+                                         use_service=False)
         self.scene.waitForSync()
 
         # store for grasping
