@@ -151,7 +151,7 @@ class GraspingClient(object):
             self.scene.addSolidPrimitive(obj.object.name,
                                          obj.object.primitives[0],
                                          obj.object.primitive_poses[0],
-                                         use_service = False)
+                                         use_service=False)
             if obj.object.primitive_poses[0].position.x < 0.85:
                 objects.append([obj, obj.object.primitive_poses[0].position.z])
 
@@ -167,8 +167,7 @@ class GraspingClient(object):
             self.scene.addSolidPrimitive(obj.name,
                                          obj.primitives[0],
                                          obj.primitive_poses[0],
-                                         use_service = True
-                                         )
+                                         use_service=False)
 
         self.scene.waitForSync()
 
