@@ -3,10 +3,12 @@
 This repository contains the Gazebo simulation for Fetch Robotics Fetch and
 Freight Research Edition Robots.
 
-Please note the _branch_: the default branch in GitHub is **gazebo9**.
-1. **gazebo9** should be used with **ROS Melodic** and **Ubuntu 18.04**
-2. **gazebo7** should be used with **ROS Kinetic** and **Ubuntu 16.04** (not supported on hardware)
-3. **gazebo2** should be used with **ROS Indigo** and **Ubuntu 14.04** (EOL)
+Please note the _branch_: the default branch in GitHub is **gazebo9**, and
+this branch is **gazebo11**.
+1. **gazebo11** should be used with **ROS Noetic** and **Ubuntu 20.04**
+2. **gazebo9** should be used with **ROS Melodic** and **Ubuntu 18.04**
+3. **gazebo7** should be used with **ROS Kinetic** and **Ubuntu 16.04** (not supported on hardware)
+4. **gazebo2** should be used with **ROS Indigo** and **Ubuntu 14.04** (EOL)
 
 ## Tutorial & Documentation
 
