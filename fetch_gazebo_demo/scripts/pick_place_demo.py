@@ -200,7 +200,7 @@ class GraspingClient(object):
             # has to be on table
             if obj.object.primitive_poses[0].position.z < 0.5:
                 continue
-            print obj.object.primitive_poses[0], obj.object.primitives[0]
+            print(obj.object.primitive_poses[0], obj.object.primitives[0])
             return obj.object, obj.grasps
         # nothing detected
         return None, None

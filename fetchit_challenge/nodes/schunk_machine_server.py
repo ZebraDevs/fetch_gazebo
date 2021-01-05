@@ -1,10 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Copyright 2019 Fetch Robotics Inc.
 # Author(s): Sarah Elliott
 
 # Python
-from __future__ import print_function
 from datetime import datetime
 from datetime import timedelta
 

@@ -320,7 +320,7 @@ def move_tests():
     pose_z_seq = [UP_Z, DOWN_Z, UP_Z, UP_Z,
                   DOWN_Z, UP_Z, DOWN_Z, UP_Z, UP_Z, DOWN_Z]
     seq_num = 0
-    raw_input("Start...Go Right")
+    input("Start...Go Right")
     while not rospy.is_shutdown():
         print("Seq Num="+str(seq_num))
 

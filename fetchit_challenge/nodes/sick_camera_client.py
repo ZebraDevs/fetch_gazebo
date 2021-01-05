@@ -1,10 +1,7 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 # Copyright 2019 Fetch Robotics Inc.
 # Author(s): Niharika Arora
-
-# Python
-from __future__ import print_function
 
 # ROS
 import rospy
