@@ -6,6 +6,7 @@
   <!-- Start MoveIt -->
   <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
     <arg name="info" value="true"/><!-- publish grasp markers -->
+    <arg name="srdf" value="$(find fetch_gazebo)/robots/fetch.gazebo.srdf.xacro"/>
   </include>
 
   <!-- Start Perception -->

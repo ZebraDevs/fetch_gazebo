@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<robot name="fetch" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find fetch_moveit_config)/config/fetch.srdf" />
+  <!-- fetch.gazebo.xacro adds four casters to the base model; add corresponding disable_collisions onto fetch.srdf as well-->
+  <disable_collisions link1="base_link" link2="bl_caster_link" reason="Default" />
+  <disable_collisions link1="base_link" link2="br_caster_link" reason="Default" />
+  <disable_collisions link1="base_link" link2="fl_caster_link" reason="Default" />
+  <disable_collisions link1="base_link" link2="fr_caster_link" reason="Default" />
+</robot>
