@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://test_zone</uri>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table1</name>
+      <pose>1.008266 0 -0.08 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://demo_cube</uri>
+      <name>demo_cube_blue</name>
+      <pose>0.64728 0.363 0.722999 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://demo_cube_green</uri>
+      <name>demo_cube_green</name>
+      <pose>0.64728 -0.213097 0.722999 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>model://50mmbin_green</uri>
+      <name>50mmbin_green</name>
+      <pose>0.877488 0.363 0.694133 0 0 -1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://50mmbin</uri>
+      <name>50mmbin_blue</name>
+      <pose> 0.877488 -0.316133 0.696021 0 0 -1.57</pose>
+    </include>
+
+    <light name='user_point_light_0' type='sun'>
+      <pose frame=''> 1.2489 0.0 4.0 0 0 0</pose>
+      <!-- <diffuse>0.7 0.7 0.7 1</diffuse> -->
+      <!-- <specular>0.1 0.1 0.1 1</specular> -->
+      <!-- <attenuation>
+        <range>10</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction> -->
+    </light>
+  </world>
+</sdf>
