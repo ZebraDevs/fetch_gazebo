@@ -4,6 +4,9 @@
   <arg name="y" default="0.0" />
   <arg name="z" default="0.0" />
   <arg name="yaw" default="0.0" />
+  <arg name="launch_teleop" default="true" />
+  <arg name="joy_device" default="/dev/fetch_joy" />
+  <arg name="ps4" default="false" />
 
   <!-- Setup controllers -->
   <rosparam file="$(find fetch_gazebo)/config/default_controllers.yaml" command="load" />
@@ -31,9 +34,11 @@
     <param name="lazy" type="bool" value="True"/>
   </node>
 
-  <!-- Start a mux between application and teleop -->
-  <node pkg="topic_tools" type="mux" name="cmd_vel_mux" respawn="true" args="base_controller/command /cmd_vel /teleop/cmd_vel">
-    <remap from="mux" to="cmd_vel_mux" />
-  </node>
+  <!-- Teleop -->
+  <include if="$(arg launch_teleop)" file="$(find fetch_bringup)/launch/include/teleop.launch.xml">
+    <arg name="joy_device" value="$(arg joy_device)"/>
+    <arg name="ps4" value="$(arg ps4)"/>
+  </include>
+  <param name="joy/deadzone" value="0.05"/>
 
 </launch>
