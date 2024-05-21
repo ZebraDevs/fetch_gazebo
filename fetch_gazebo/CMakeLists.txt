@@ -56,7 +56,7 @@ install(
   FILES_MATCHING PATTERN "*.h"
 )
 
-install(
+catkin_install_python(
   PROGRAMS
     scripts/prepare_simulated_robot.py
     scripts/prepare_simulated_robot_pick_place.py
